@@ -4,37 +4,37 @@ const skillCategories = [
   {
     title: "Business Analysis",
     skills: [
-      { name: "Requirements Gathering", level: 90 },
-      { name: "Process Modeling", level: 85 },
+      { name: "Requirements Gathering", level: 87 },
+      { name: "Process Modeling", level: 80 },
       { name: "Stakeholder Management", level: 95 },
-      { name: "Data Analysis", level: 88 },
+      { name: "Data Analysis", level: 85 },
     ],
   },
   {
     title: "Product Management",
     skills: [
       { name: "Product Strategy", level: 92 },
-      { name: "Roadmap Planning", level: 88 },
+      { name: "Roadmap Planning", level: 90 },
       { name: "User Story Mapping", level: 85 },
-      { name: "Product Analytics", level: 90 },
+      { name: "Product Analytics", level: 85 },
     ],
   },
   {
     title: "Methodologies",
     skills: [
       { name: "Agile/Scrum", level: 95 },
-      { name: "Kanban", level: 85 },
-      { name: "Lean", level: 80 },
-      { name: "Design Thinking", level: 88 },
+      { name: "Kanban", level: 90 },
+      { name: "Lean", level: 75 },
+      { name: "Design Thinking", level: 75 },
     ],
   },
   {
     title: "Tools",
     skills: [
-      { name: "Jira", level: 90 },
-      { name: "Confluence", level: 85 },
-      { name: "Tableau", level: 82 },
-      { name: "Figma", level: 75 },
+      { name: "Jira", level: 85 },
+      { name: "Confluence", level: 80 },
+      { name: "Tableau", level: 75 },
+      { name: "Figma", level: 85 },
     ],
   },
 ];

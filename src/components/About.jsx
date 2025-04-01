@@ -28,13 +28,13 @@ const About = () => {
       >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Profile Image */}
+            {/* Profile Image - Reducida al 80% del tamaño original */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className="relative w-4/5 mx-auto md:ml-auto" // Añadido w-4/5 para reducir al 80%
             >
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
@@ -134,6 +134,7 @@ const About = () => {
 };
 
 export default About;
+
 
 
 
