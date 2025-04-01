@@ -7,8 +7,8 @@ const Contact = () => {
     {
       icon: <FaWhatsapp className="text-2xl" />,
       label: "WhatsApp",
-      value: "+54 9 11 1234-5678",
-      link: "https://wa.me/5491112345678"
+      value: "+54 9 11 3482-1203",
+      link: "https://wa.me/5491134821203"
     },
     {
       icon: <FaEnvelope className="text-2xl" />,
@@ -25,8 +25,8 @@ const Contact = () => {
     {
       icon: <FaTelegram className="text-2xl" />,
       label: "Telegram",
-      value: "@yourusername",
-      link: "https://t.me/yourusername"
+      value: "@bruno_9000",
+      link: "https://t.me/bruno_9000"
     }
   ];
 

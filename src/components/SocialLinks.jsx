@@ -18,12 +18,12 @@ const SocialLinks = () => {
     },
     {
       name: 'Telegram',
-      url: 'https://t.me/yourusername',
+      url: 'https://t.me/bruno_9000',
       icon: <FaTelegram className="text-5xl" />
     },
     {
       name: 'WhatsApp',
-      url: 'https://wa.me/5491112345678',
+      url: 'https://wa.me/5491134821203',
       icon: <FaWhatsapp className="text-5xl" />
     }
   ];
@@ -67,6 +67,7 @@ const SocialLinks = () => {
 };
 
 export default SocialLinks;
+
 
 
 

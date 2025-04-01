@@ -25,5 +25,10 @@
     "education": "Education",
     "skills": "Skills",
     "contact": "Contact"
+  },
+  "chat": {
+    "title": "Conversation with Bruno's assistant",
+    "coming_soon": "Coming soon..."
   }
 }
+
