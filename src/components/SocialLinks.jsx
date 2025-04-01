@@ -9,22 +9,22 @@ const SocialLinks = () => {
     {
       name: 'GitHub',
       url: 'https://github.com/bruno3a',
-      icon: <FaGithub className="text-4xl" />
+      icon: <FaGithub className="text-5xl" />
     },
     {
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/btrezza/',
-      icon: <FaLinkedin className="text-4xl" />
+      icon: <FaLinkedin className="text-5xl" />
     },
     {
       name: 'Telegram',
       url: 'https://t.me/yourusername',
-      icon: <FaTelegram className="text-4xl" />
+      icon: <FaTelegram className="text-5xl" />
     },
     {
       name: 'WhatsApp',
       url: 'https://wa.me/5491112345678',
-      icon: <FaWhatsapp className="text-4xl" />
+      icon: <FaWhatsapp className="text-5xl" />
     }
   ];
 
@@ -39,7 +39,7 @@ const SocialLinks = () => {
 
   return (
     <div className="fixed left-4 bottom-4 z-50">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-8">
         {links.map((link, index) => (
           <motion.a
             key={link.name}
@@ -67,6 +67,7 @@ const SocialLinks = () => {
 };
 
 export default SocialLinks;
+
 
 
 

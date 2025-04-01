@@ -9,7 +9,7 @@
     }
   },
   "about": {
-    "description": "Con más de 8 años de experiencia en análisis de negocios y gestión de productos, me especializo en cerrar la brecha entre las necesidades comerciales y las soluciones técnicas. Mi enfoque combina pensamiento analítico con visión estratégica para entregar resultados impactantes.",
+    "description": "Con más de 8 años de experiencia...",
     "stats": {
       "years": "Años de Experiencia",
       "projects": "Proyectos Completados",
@@ -25,5 +25,10 @@
     "education": "Educación",
     "skills": "Habilidades",
     "contact": "Contacto"
+  },
+  "chat": {
+    "title": "Chatea conmigo",
+    "coming_soon": "Próximamente..."
   }
 }
+

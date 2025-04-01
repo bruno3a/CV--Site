@@ -2,8 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { FaTelegram } from 'react-icons/fa';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative">
       <div className="container mx-auto px-4 text-center">
@@ -13,7 +16,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="text-5xl md:text-7xl font-bold mb-6"
         >
-          Bruno Trezza
+          {t('hero.title')}
         </motion.h1>
 
         <motion.div
@@ -24,13 +27,13 @@ const Hero = () => {
         >
           <TypeAnimation
             sequence={[
-              'Business Analyst',
+              t('hero.roles.business_analyst'),
               2000,
-              'Product Owner',
+              t('hero.roles.product_owner'),
               2000,
-              'AI Enthusiast',
+              t('hero.roles.ai_enthusiast'),
               2000,
-              'Data Follower',
+              t('hero.roles.data_follower'),
               2000,
             ]}
             wrapper="span"
@@ -47,7 +50,7 @@ const Hero = () => {
           className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full flex items-center justify-center mx-auto gap-2 transition-colors"
         >
           <FaTelegram className="text-xl" />
-          Let's Chat
+          {t('about.cta')}
         </motion.button>
       </div>
     </section>

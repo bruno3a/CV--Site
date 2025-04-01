@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const NavLink = ({ href, children }) => (
   <a 
@@ -11,6 +12,7 @@ const NavLink = ({ href, children }) => (
 );
 
 const Navbar = () => {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -38,12 +40,12 @@ const Navbar = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <NavLink href="#about">About</NavLink>
-            <NavLink href="#experience">Experience</NavLink>
-            <NavLink href="#projects">Projects</NavLink>
-            <NavLink href="#education">Education</NavLink>
-            <NavLink href="#skills">Skills</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
+            <NavLink href="#about">{t('nav.about')}</NavLink>
+            <NavLink href="#experience">{t('nav.experience')}</NavLink>
+            <NavLink href="#projects">{t('nav.projects')}</NavLink>
+            <NavLink href="#education">{t('nav.education')}</NavLink>
+            <NavLink href="#skills">{t('nav.skills')}</NavLink>
+            <NavLink href="#contact">{t('nav.contact')}</NavLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,12 +76,12 @@ const Navbar = () => {
           transition={{ duration: 0.2 }}
         >
           <div className="py-4 space-y-4">
-            <NavLink href="#about">About</NavLink>
-            <NavLink href="#experience">Experience</NavLink>
-            <NavLink href="#projects">Projects</NavLink>
-            <NavLink href="#education">Education</NavLink>
-            <NavLink href="#skills">Skills</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
+            <NavLink href="#about">{t('nav.about')}</NavLink>
+            <NavLink href="#experience">{t('nav.experience')}</NavLink>
+            <NavLink href="#projects">{t('nav.projects')}</NavLink>
+            <NavLink href="#education">{t('nav.education')}</NavLink>
+            <NavLink href="#skills">{t('nav.skills')}</NavLink>
+            <NavLink href="#contact">{t('nav.contact')}</NavLink>
           </div>
         </motion.div>
       </div>
