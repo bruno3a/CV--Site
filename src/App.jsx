@@ -32,7 +32,6 @@ const App = () => {
           <Contact />
         </main>
         
-        {/* Componentes flotantes */}
         <ChatBot />
         <SocialLinks />
       </div>

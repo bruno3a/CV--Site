@@ -25,15 +25,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'npm'
           
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
         
       - name: Build
         run: npm run build
         env:
           CI: false
-          PUBLIC_URL: /portfolio
+          PUBLIC_URL: .
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -53,4 +54,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
