@@ -3,32 +3,40 @@ import { useState } from 'react';
 
 const projects = [
   {
-    title: "Enterprise Analytics Dashboard",
-    description: "A comprehensive analytics platform for enterprise-level data visualization and reporting",
-    image: `${process.env.PUBLIC_URL}/projects/analytics-dashboard.jpg`,
-    tags: ["Product Management", "Data Analytics", "UX Design"],
-    link: "#",
+    title: "AI Assisted Chatbot (RAG)",
+    description: "Implemented a Retrieval-Augmented Generation chatbot using LangChain and enterprise documentation, improving response accuracy by 85% and reducing support tickets by 40%",
+    image: `${process.env.PUBLIC_URL}/projects/ai-chatbot.jpg`,
+    tags: ["LLMs", "RAG", "Python", "Azure", "Vector DB", "LangChain"],
   },
   {
-    title: "Customer Journey Mapping Tool",
-    description: "Interactive tool for mapping and analyzing customer experiences across touchpoints",
-    image: `${process.env.PUBLIC_URL}/projects/journey-mapping.jpg`,
-    tags: ["User Research", "Process Optimization", "Agile"],
-    link: "#",
+    title: "ERP Discovery & Implementation",
+    description: "Led the discovery phase and implementation of an enterprise-wide ERP system, coordinating with stakeholders across 5 departments and managing integration with legacy systems",
+    image: `${process.env.PUBLIC_URL}/projects/erp-system.jpg`,
+    tags: ["Business Analysis", "Process Optimization", "Change Management", "ERP", "Integration"],
   },
   {
-    title: "Agile Project Management System",
-    description: "Custom-built system for managing agile projects and team collaboration",
-    image: `${process.env.PUBLIC_URL}/projects/agile-system.jpg`,
-    tags: ["Agile", "Team Leadership", "Process Design"],
-    link: "#",
+    title: "CPQ Implementation",
+    description: "Managed the implementation of a Configure-Price-Quote solution across 5 countries in Central America, resulting in a 60% reduction in quote generation time and 30% increase in sales accuracy",
+    image: `${process.env.PUBLIC_URL}/projects/cpq-system.jpg`,
+    tags: ["CPQ", "Sales Operations", "Multi-country", "Process Design", "Training"],
   },
   {
-    title: "Market Intelligence Platform",
-    description: "AI-powered platform for market trend analysis and competitor tracking",
-    image: `${process.env.PUBLIC_URL}/projects/market-intelligence.jpg`,
-    tags: ["Market Analysis", "Strategy", "Data Science"],
-    link: "#",
+    title: "API Catalog Management",
+    description: "Developed and maintained an enterprise API catalog system, implementing governance policies and improving API discovery and reusability across the organization",
+    image: `${process.env.PUBLIC_URL}/projects/api-catalog.jpg`,
+    tags: ["API Management", "Documentation", "Governance", "Azure", "Developer Experience"],
+  },
+  {
+    title: "Personal CV Webpage",
+    description: "Designed and developed a responsive personal portfolio website using React and Tailwind CSS, featuring multi-language support and interactive components",
+    image: `${process.env.PUBLIC_URL}/projects/portfolio-site.jpg`,
+    tags: ["React", "Tailwind CSS", "Frontend", "UI/UX", "Personal Branding"],
+  },
+  {
+    title: "eCommerce Integration Platform",
+    description: "Currently developing an eCommerce solution with integrated billing system and Mercado Libre marketplace connectivity, focusing on automated inventory and order management",
+    image: `${process.env.PUBLIC_URL}/projects/ecommerce-integration.jpg`,
+    tags: ["eCommerce", "API Integration", "Marketplace", "In Progress", "System Design"],
   },
 ];
 
@@ -82,14 +90,6 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-
-                {/* Link */}
-                <a
-                  href={project.link}
-                  className="inline-block text-primary hover:text-primary-light transition-colors"
-                >
-                  Learn more →
-                </a>
               </div>
 
               {/* Hover effect */}
@@ -107,3 +107,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
