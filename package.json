@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bruno3a.github.io/portfolio",
+  "homepage": "https://bruno3a.github.io/portfolio/",
   "dependencies": {
     "@react-spring/web": "^9.7.5",
     "d3-geo": "^3.1.1",
