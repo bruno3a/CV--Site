@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
-import { FaFileDownload } from 'react-icons/fa';
+import { FaFileDownload, FaTelegram } from 'react-icons/fa';
 
 const About = () => {
   const { t } = useLanguage();
@@ -27,49 +27,72 @@ const About = () => {
         className="relative z-20"
       >
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Profile Image - Reducida al 80% del tamaño original */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-4/5 mx-auto md:ml-auto" // Añadido w-4/5 para reducir al 80%
-            >
-              <div className="aspect-square rounded-2xl overflow-hidden">
-                <img
-                  src={`${process.env.PUBLIC_URL}/profile-image.jpg`}
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
+          <div className="grid md:grid-cols-12 gap-8 items-start">
+            {/* Columna izquierda: Imagen y botones */}
+            <div className="md:col-span-4">
+              {/* Profile Image */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="relative w-4/5 mx-auto md:w-full mb-6"
+              >
+                <div className="aspect-square rounded-2xl overflow-hidden">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/profile-image.jpg`}
+                    alt="Profile"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </motion.div>
 
-            {/* Text Content */}
+              {/* Buttons */}
+              <div className="flex flex-col gap-4 mt-8">
+                <a 
+                  href="#contact" 
+                  className="button-primary text-center inline-flex items-center justify-center gap-2"
+                >
+                  <FaTelegram className="text-xl" />
+                  {t('about.cta')}
+                </a>
+                
+                <button
+                  onClick={handleDownloadCV}
+                  className="button-outline inline-flex items-center justify-center gap-2"
+                >
+                  <FaFileDownload />
+                  {t('hero.download_cv')}
+                </button>
+              </div>
+            </div>
+
+            {/* Columna derecha: Texto y stats */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-6 max-w-full"
+              className="md:col-span-8 space-y-8"
             >
-              <div className="space-y-4">
-                <p className="text-lg text-gray-300">
+              {/* Texto */}
+              <div className="space-y-6">
+                <p className="text-xl text-gray-300 leading-relaxed">
                   {t('about.description')}
                 </p>
-                <p className="text-lg text-gray-300">
+                <p className="text-xl text-gray-300 leading-relaxed">
                   {t('about.extended_description')}
                 </p>
               </div>
 
               {/* Stats Cards */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8 w-full">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[120px]">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className="card p-4 text-center"
+                  className="card h-full flex flex-col items-center justify-center text-center"
                 >
                   <div className="text-2xl font-bold text-primary">8+</div>
                   <div className="text-sm text-gray-400">{t('about.stats.years')}</div>
@@ -80,7 +103,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.7 }}
-                  className="card p-4 text-center"
+                  className="card h-full flex flex-col items-center justify-center text-center"
                 >
                   <div className="text-2xl font-bold text-primary">7</div>
                   <div className="text-sm text-gray-400">{t('about.stats.projects')}</div>
@@ -91,7 +114,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.8 }}
-                  className="card p-4 text-center"
+                  className="card h-full flex flex-col items-center justify-center text-center"
                 >
                   <div className="text-2xl font-bold text-primary">10+</div>
                   <div className="text-sm text-gray-400">{t('about.stats.clients')}</div>
@@ -102,28 +125,11 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.9 }}
-                  className="card p-4 text-center"
+                  className="card h-full flex flex-col items-center justify-center text-center"
                 >
                   <div className="text-2xl font-bold text-primary">5</div>
                   <div className="text-sm text-gray-400">{t('about.stats.areas')}</div>
                 </motion.div>
-              </div>
-
-              <div className="flex gap-4 mt-8">
-                <a 
-                  href="#contact" 
-                  className="button-primary inline-block"
-                >
-                  {t('about.cta')}
-                </a>
-                
-                <button
-                  onClick={handleDownloadCV}
-                  className="button-outline inline-flex items-center gap-2"
-                >
-                  <FaFileDownload />
-                  {t('hero.download_cv')}
-                </button>
               </div>
             </motion.div>
           </div>
@@ -134,6 +140,11 @@ const About = () => {
 };
 
 export default About;
+
+
+
+
+
 
 
 
