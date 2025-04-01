@@ -1,0 +1,86 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
+const languages = [
+  { 
+    code: 'en', 
+    name: 'English', 
+    flag: '/flags/us.svg',
+    available: true 
+  },
+  { 
+    code: 'es', 
+    name: 'Español', 
+    flag: '/flags/es.svg',
+    available: true 
+  },
+  { 
+    code: 'pt', 
+    name: 'Português', 
+    flag: '/flags/br.svg',
+    available: false 
+  },
+  { 
+    code: 'ru', 
+    name: 'Русский', 
+    flag: '/flags/ru.svg',
+    available: false 
+  },
+];
+
+const LanguageSelector = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedLang, setSelectedLang] = useState(languages[0]);
+
+  return (
+    <div className="fixed top-4 right-4 z-50">
+      <div className="relative">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center space-x-2 bg-background-light rounded-lg px-4 py-2 text-white hover:bg-background-dark transition-colors"
+        >
+          <img 
+            src={selectedLang.flag} 
+            alt={`${selectedLang.name} flag`}
+            className="w-5 h-5 rounded-sm object-cover"
+          />
+          <span className="ml-2">{selectedLang.name}</span>
+        </button>
+
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="absolute top-full right-0 mt-2 bg-background-light rounded-lg shadow-lg overflow-hidden min-w-[160px]"
+          >
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => {
+                  if (lang.available) {
+                    setSelectedLang(lang);
+                    setIsOpen(false);
+                  }
+                }}
+                className={`flex items-center w-full px-4 py-2 hover:bg-background-dark transition-colors
+                  ${!lang.available && 'opacity-50 cursor-not-allowed'}`}
+              >
+                <img 
+                  src={lang.flag} 
+                  alt={`${lang.name} flag`}
+                  className="w-5 h-5 rounded-sm object-cover"
+                />
+                <span className="ml-2">{lang.name}</span>
+                {!lang.available && (
+                  <span className="text-xs text-gray-400 ml-auto">(Soon)</span>
+                )}
+              </button>
+            ))}
+          </motion.div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default LanguageSelector;
