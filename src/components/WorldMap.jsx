@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const WorldMap = () => {
+  const { t } = useLanguage();
   const workExperience = [
     {
       country: "Chile",
@@ -97,7 +99,7 @@ const WorldMap = () => {
 
   return (
     <section id="worldmap" className="container mx-auto py-20">
-      <h2 className="text-3xl font-bold text-center mb-10">Global Experience</h2>
+      <h2 className="text-3xl font-bold text-center mb-10">{t('sections.worldmap.title')}</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto px-4">
         {workExperience.map((experience, index) => (
           <motion.div
@@ -126,5 +128,7 @@ const WorldMap = () => {
 };
 
 export default WorldMap;
+
+
 
 

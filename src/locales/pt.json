@@ -6,15 +6,17 @@
       "product_owner": "Product Owner",
       "ai_enthusiast": "Entusiasta de IA",
       "data_follower": "Seguidor de Dados"
-    }
+    },
+    "download_cv": "Baixar CV"
   },
   "about": {
     "description": "Com mais de 8 anos de experiência em análise de negócios e gestão de produtos, sou especializado em fazer a ponte entre necessidades comerciais e soluções técnicas. Minha abordagem combina pensamento analítico com visão estratégica para entregar resultados impactantes.",
+    "extended_description": "Como Product Owner, fico feliz em saber que minhas decisões melhoram a vida das pessoas. Com minha perspectiva centrada em dados, gosto de discutir definições de produto e experiência do usuário. Amo tecnologia e tenho orgulho de que seja parte da minha profissão. Sou empático, responsável, aprendo rápido e busco desafios com grande impacto que me permitam manter uma descoberta contínua, dando-me a oportunidade de me destacar e ser reconhecido",
     "stats": {
       "years": "Anos de Experiência",
       "projects": "Projetos Concluídos",
       "clients": "Clientes Satisfeitos",
-      "awards": "Prêmios Recebidos"
+      "areas": "Áreas"
     },
     "cta": "Vamos Conversar"
   },
@@ -25,5 +27,115 @@
     "education": "Educação",
     "skills": "Habilidades",
     "contact": "Contato"
+  },
+  "experience": {
+    "title": "Experiência",
+    "roles": {
+      "ey": {
+        "title": "Analista de Negócios - Product Owner",
+        "company": "Ernst & Young - em representação da Hexaware Technologies",
+        "period": "Dezembro 2021 - Presente",
+        "description": {
+          "1": "Coleta de requisitos do produto e gestão de refinamento do backlog no Azure DevOps",
+          "2": "Conduzi cerimônias Scrum-ban, planejamento de releases e coordenação de equipes multifuncionais",
+          "3": "Impulsionei o desenvolvimento de uma solução de API Management para colaboradores da EY",
+          "4": "Implementei LLMs para chat assistido por IA (RAG), melhorando a experiência do usuário e simplificando processos",
+          "5": "Colaborei com equipes globais, utilizando Postman, MongoDB, Miro e Azure DevOps",
+          "6": "Gerenciei um backlog de produto com mais de 150 itens e coordenei com stakeholders"
+        }
+      },
+      "deloitte": {
+        "title": "Analista de Negócios Sr.",
+        "company": "Deloitte - em representação da Globant",
+        "period": "Junho 2021 - Dezembro 2021",
+        "description": {
+          "1": "Participei da Academia BA, aprimorando a experiência em análise de negócios e compartilhando conhecimento",
+          "2": "Documentei histórias de usuário e gerenciei backlog no Jira",
+          "3": "Apoiei o desenvolvimento e manutenção de uma solução interna de gestão de compromissos",
+          "4": "Apliquei framework Agile para melhorar a execução de projetos e colaboração da equipe",
+          "5": "Completei certificações Udemy para fortalecer habilidades BA e Agile",
+          "6": "Desenvolvi requisitos de negócio completos e histórias de usuário",
+          "7": "Facilitei workshops e sessões de treinamento para stakeholders"
+        }
+      },
+      "beesion": {
+        "title": "Líder de Produto Funcional & Analista de Negócios",
+        "company": "Beesion Technologies (clientes Claro CenAm & IPLAN)",
+        "period": "Fev 2016 - Junho 2021",
+        "description": {
+          "1": "Liderei análise de requisitos, priorização de backlog e melhorias de produto",
+          "2": "Realizei treinamento de usuários, implementações in loco e suporte ao cliente",
+          "3": "Gerenciei documentação, testes de usuário e monitoramento de problemas para solução CPQ",
+          "4": "Trabalhei próximo a desenvolvedores, gerentes e usuários finais para melhorar usabilidade",
+          "5": "Implementei suite CPQ para Claro América Central em 5 países",
+          "6": "Desenvolvi habilidades sólidas de resolução de problemas, comunicação e gestão de stakeholders",
+          "7": "Conduzi sessões de descoberta para projeto de implementação ERP (IPLAN)"
+        }
+      }
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "view_more": "Ver Mais",
+    "items": {
+      "ai_chatbot": {
+        "title": "Chatbot Assistido por IA (RAG)",
+        "description": "Implementei um chatbot com Geração Aumentada por Recuperação usando LangChain e documentação empresarial, melhorando a precisão das respostas em 85% e reduzindo tickets de suporte em 40%"
+      },
+      "erp_implementation": {
+        "title": "Descoberta e Implementação de ERP",
+        "description": "Liderei a fase de descoberta e implementação de um sistema ERP empresarial, coordenando com stakeholders de 5 departamentos e gerenciando a integração com sistemas legados"
+      },
+      "cpq_implementation": {
+        "title": "Implementação de CPQ",
+        "description": "Gerenciei a implementação de uma solução Configure-Price-Quote em 5 países da América Central, resultando em redução de 60% no tempo de geração de cotações e aumento de 30% na precisão das vendas"
+      },
+      "api_catalog": {
+        "title": "Gestão de Catálogo de APIs",
+        "description": "Desenvolvi e mantive um sistema de catálogo de APIs empresarial, implementando políticas de governança e melhorando a descoberta e reutilização de APIs em toda a organização"
+      },
+      "portfolio_website": {
+        "title": "Página Web de Currículo Pessoal",
+        "description": "Projetei e desenvolvi um site pessoal responsivo usando React e Tailwind CSS, com suporte multi-idioma e componentes interativos"
+      },
+      "ecommerce_platform": {
+        "title": "Plataforma de Integração eCommerce",
+        "description": "Atualmente desenvolvendo uma solução de comércio eletrônico com sistema de faturamento integrado e conectividade com Mercado Livre, focado na gestão automatizada de estoque e pedidos"
+      }
+    }
+  },
+  "sections": {
+    "projects": {
+      "title": "Projetos em Destaque"
+    },
+    "worldmap": {
+      "title": "Experiência Global"
+    },
+    "education": {
+      "title": "Educação e Certificações",
+      "languages": "Idiomas",
+      "levels": {
+        "native": "Nativo",
+        "advanced": "Avançado",
+        "basic": "Básico"
+      }
+    },
+    "skills": {
+      "title": "Habilidades e Tecnologias"
+    },
+    "contact": {
+      "title": "Contate-me",
+      "subtitle": "Vamos trabalhar juntos",
+      "form": {
+        "name": "Nome",
+        "email": "E-mail",
+        "message": "Mensagem",
+        "send": "Enviar Mensagem"
+      }
+    }
   }
 }
+
+
+
+

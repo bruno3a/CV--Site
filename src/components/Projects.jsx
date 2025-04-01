@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const projects = [
   {
@@ -41,6 +42,7 @@ const projects = [
 ];
 
 const Projects = () => {
+  const { t } = useLanguage();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
@@ -51,7 +53,7 @@ const Projects = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="section-title">Featured Projects</h2>
+        <h2 className="section-title">{t('sections.projects.title')}</h2>
         
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (

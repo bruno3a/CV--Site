@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { IoLanguage } from 'react-icons/io5';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const education = [
   {
@@ -26,34 +27,36 @@ const education = [
   }
 ];
 
-const languages = [
-  { 
-    name: "Spanish", 
-    level: "Native", 
-    flag: `${process.env.PUBLIC_URL}/flags/es.svg`,
-    progress: 100 
-  },
-  { 
-    name: "English", 
-    level: "Advanced", 
-    flag: `${process.env.PUBLIC_URL}/flags/us.svg`,
-    progress: 90 
-  },
-  { 
-    name: "Portuguese", 
-    level: "Advanced", 
-    flag: `${process.env.PUBLIC_URL}/flags/br.svg`,
-    progress: 85 
-  },
-  { 
-    name: "Russian", 
-    level: "Basic", 
-    flag: `${process.env.PUBLIC_URL}/flags/ru.svg`,
-    progress: 30 
-  }
-];
-
 const Education = () => {
+  const { t } = useLanguage();
+  
+  const languages = [
+    { 
+      name: "Spanish", 
+      level: t('sections.education.levels.native'), 
+      flag: `${process.env.PUBLIC_URL}/flags/es.svg`,
+      progress: 100 
+    },
+    { 
+      name: "English", 
+      level: t('sections.education.levels.advanced'), 
+      flag: `${process.env.PUBLIC_URL}/flags/us.svg`,
+      progress: 90 
+    },
+    { 
+      name: "Portuguese", 
+      level: t('sections.education.levels.advanced'), 
+      flag: `${process.env.PUBLIC_URL}/flags/br.svg`,
+      progress: 85 
+    },
+    { 
+      name: "Russian", 
+      level: t('sections.education.levels.basic'), 
+      flag: `${process.env.PUBLIC_URL}/flags/ru.svg`,
+      progress: 30 
+    }
+  ];
+
   return (
     <section id="education" className="section-container">
       <motion.div
@@ -62,7 +65,7 @@ const Education = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="section-title">Education & Certifications</h2>
+        <h2 className="section-title">{t('sections.education.title')}</h2>
 
         <div className="space-y-8 mb-12">
           {education.map((item, index) => (
@@ -115,7 +118,7 @@ const Education = () => {
         >
           <div className="flex items-center gap-2 mb-6">
             <IoLanguage className="text-2xl text-primary" />
-            <h3 className="text-xl font-bold">Languages</h3>
+            <h3 className="text-xl font-bold">{t('sections.education.languages')}</h3>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

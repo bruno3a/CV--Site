@@ -1,50 +1,54 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const experiences = [
+const getExperienceData = (t) => [
   {
-    title: "Business Analyst - Product Owner",
-    company: "Ernst & Young - in representation of Hexaware Technologies",
-    period: "December 2021 - Present",
+    title: t('experience.roles.ey.title'),
+    company: t('experience.roles.ey.company'),
+    period: t('experience.roles.ey.period'),
     description: [
-      "Gathered product requirements and managed backlog refinement in Azure DevOps",
-    "Led Scrum-ban ceremonies, release planning, and cross-functional team coordination",
-    "Drove the development of an API Management solution for EY’s collaborators",
-    "Implemented LLMs for AI-assisted chat (RAG), enhancing user experience and simplifying processes",
-    "Collaborated with global teams, leveraging Postman, MongoDB, Miro, and Azure DevOps",
-    "Managed a product backlog of 150+ items and coordinated/managed with stakeholders",
+      t('experience.roles.ey.description.1'),
+      t('experience.roles.ey.description.2'),
+      t('experience.roles.ey.description.3'),
+      t('experience.roles.ey.description.4'),
+      t('experience.roles.ey.description.5'),
+      t('experience.roles.ey.description.6'),
     ],
   },
   {
-    title: "Sr. Business Analyst",
-    company: "Deloitte - in representation of Globant",
-    period: "June 2021 - December 2021",
+    title: t('experience.roles.deloitte.title'),
+    company: t('experience.roles.deloitte.company'),
+    period: t('experience.roles.deloitte.period'),
     description: [
-      "Participated in the BA Academy, enhancing business analysis expertise and sharing knowledge with colleagues",
-    "Documented user stories and managed backlog in Jira",
-    "Supported the development and maintenance of an internal engagement management solution",
-    "Applied Agile framework to improve project execution and team collaboration",
-    "Completed Udemy certifications to strengthen BA and Agile skills",
-    "Developed comprehensive business requirements and user stories",
-    "Facilitated workshops and training sessions for stakeholders",
+      t('experience.roles.deloitte.description.1'),
+      t('experience.roles.deloitte.description.2'),
+      t('experience.roles.deloitte.description.3'),
+      t('experience.roles.deloitte.description.4'),
+      t('experience.roles.deloitte.description.5'),
+      t('experience.roles.deloitte.description.6'),
+      t('experience.roles.deloitte.description.7'),
     ],
   },
   {
-    title: "Functional Product Leader & Business Analyst",
-    company: "Beesion Technologies (Claro CenAm & IPLAN clients)",
-    period: "Feb 2016 - June 2021",
+    title: t('experience.roles.beesion.title'),
+    company: t('experience.roles.beesion.company'),
+    period: t('experience.roles.beesion.period'),
     description: [
-      "Led requirement analysis, backlog prioritization, and product improvements",
-    "Conducted user training, onsite implementations, and provided client support",
-    "Managed documentation, user testing, and issue monitoring for CPQ (Configure-Price-Quote) solution",
-    "Worked closely with developers, managers, and end users to enhance usability",
-    "Implemented the CPQ suite for Claro Central America across 5 countries",
-    "Developed strong problem-solving, communication, and stakeholder management skills",
-    "Conducted discovery sessions for an ERP implementation project (IPLAN)",
+      t('experience.roles.beesion.description.1'),
+      t('experience.roles.beesion.description.2'),
+      t('experience.roles.beesion.description.3'),
+      t('experience.roles.beesion.description.4'),
+      t('experience.roles.beesion.description.5'),
+      t('experience.roles.beesion.description.6'),
+      t('experience.roles.beesion.description.7'),
     ],
   },
 ];
 
 const Experience = () => {
+  const { t } = useLanguage();
+  const experiences = getExperienceData(t);
+  
   return (
     <section id="experience" className="section-container">
       <motion.div
@@ -53,7 +57,7 @@ const Experience = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title">{t('experience.title')}</h2>
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
@@ -93,3 +97,4 @@ const Experience = () => {
 };
 
 export default Experience;
+

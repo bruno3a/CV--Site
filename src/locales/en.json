@@ -28,11 +28,137 @@
     "skills": "Skills",
     "contact": "Contact"
   },
+  "experience": {
+    "title": "Experience",
+    "roles": {
+      "ey": {
+        "title": "Business Analyst - Product Owner",
+        "company": "Ernst & Young - in representation of Hexaware Technologies",
+        "period": "December 2021 - Present",
+        "description": {
+          "1": "Gathered product requirements and managed backlog refinement in Azure DevOps",
+          "2": "Led Scrum-ban ceremonies, release planning, and cross-functional team coordination",
+          "3": "Drove the development of an API Management solution for EY's collaborators",
+          "4": "Implemented LLMs for AI-assisted chat (RAG), enhancing user experience and simplifying processes",
+          "5": "Collaborated with global teams, leveraging Postman, MongoDB, Miro, and Azure DevOps",
+          "6": "Managed a product backlog of 150+ items and coordinated/managed with stakeholders"
+        }
+      },
+      "deloitte": {
+        "title": "Sr. Business Analyst",
+        "company": "Deloitte - in representation of Globant",
+        "period": "June 2021 - December 2021",
+        "description": {
+          "1": "Participated in the BA Academy, enhancing business analysis expertise and sharing knowledge with colleagues",
+          "2": "Documented user stories and managed backlog in Jira",
+          "3": "Supported the development and maintenance of an internal engagement management solution",
+          "4": "Applied Agile framework to improve project execution and team collaboration",
+          "5": "Completed Udemy certifications to strengthen BA and Agile skills",
+          "6": "Developed comprehensive business requirements and user stories",
+          "7": "Facilitated workshops and training sessions for stakeholders"
+        }
+      },
+      "beesion": {
+        "title": "Functional Product Leader & Business Analyst",
+        "company": "Beesion Technologies (Claro CenAm & IPLAN clients)",
+        "period": "Feb 2016 - June 2021",
+        "description": {
+          "1": "Led requirement analysis, backlog prioritization, and product improvements",
+          "2": "Conducted user training, onsite implementations, and provided client support",
+          "3": "Managed documentation, user testing, and issue monitoring for CPQ (Configure-Price-Quote) solution",
+          "4": "Worked closely with developers, managers, and end users to enhance usability",
+          "5": "Implemented the CPQ suite for Claro Central America across 5 countries",
+          "6": "Developed strong problem-solving, communication, and stakeholder management skills",
+          "7": "Conducted discovery sessions for an ERP implementation project (IPLAN)"
+        }
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "view_more": "View More",
+    "items": {
+      "ai_chatbot": {
+        "title": "AI Assisted Chatbot (RAG)",
+        "description": "Implemented a Retrieval-Augmented Generation chatbot using LangChain and enterprise documentation, improving response accuracy by 85% and reducing support tickets by 40%"
+      },
+      "erp_implementation": {
+        "title": "ERP Discovery & Implementation",
+        "description": "Led the discovery phase and implementation of an enterprise-wide ERP system, coordinating with stakeholders across 5 departments and managing integration with legacy systems"
+      },
+      "cpq_implementation": {
+        "title": "CPQ Implementation",
+        "description": "Managed the implementation of a Configure-Price-Quote solution across 5 countries in Central America, resulting in a 60% reduction in quote generation time and 30% increase in sales accuracy"
+      },
+      "api_catalog": {
+        "title": "API Catalog Management",
+        "description": "Developed and maintained an enterprise API catalog system, implementing governance policies and improving API discovery and reusability across the organization"
+      },
+      "portfolio_website": {
+        "title": "Personal CV Webpage",
+        "description": "Designed and developed a responsive personal portfolio website using React and Tailwind CSS, featuring multi-language support and interactive components"
+      },
+      "ecommerce_platform": {
+        "title": "eCommerce Integration Platform",
+        "description": "Currently developing an eCommerce solution with integrated billing system and Mercado Libre marketplace connectivity, focusing on automated inventory and order management"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "technical": "Technical Skills",
+    "soft": "Soft Skills"
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "languages": "Languages"
+  },
+  "contact": {
+    "title": "Contact",
+    "get_in_touch": "Get in Touch",
+    "send_message": "Send Message"
+  },
   "chat": {
     "title": "Conversation with Bruno's assistant",
     "coming_soon": "Coming soon..."
+  },
+  "sections": {
+    "projects": {
+      "title": "Featured Projects"
+    },
+    "worldmap": {
+      "title": "Global Experience"
+    },
+    "education": {
+      "title": "Education & Certifications",
+      "languages": "Languages",
+      "levels": {
+        "native": "Native",
+        "advanced": "Advanced",
+        "basic": "Basic"
+      }
+    },
+    "skills": {
+      "title": "Skills & Technologies"
+    },
+    "contact": {
+      "title": "Contact Me",
+      "subtitle": "Let's work together",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send Message"
+      }
+    }
   }
 }
+
+
+
+
+
+
 
 
 
