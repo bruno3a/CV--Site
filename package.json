@@ -2,7 +2,7 @@
   "name": "CV--Site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bruno3a.github.io/CV--Site/",
+  "homepage": "https://bruno3a.github.io/CV--Site",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && copy build\\index.html build\\404.html",
