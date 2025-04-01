@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "https://bruno3a.github.io/portfolio/static/css/main.949eeeae.css",
-    "main.js": "https://bruno3a.github.io/portfolio/static/js/main.1fb4d317.js",
-    "index.html": "https://bruno3a.github.io/portfolio/index.html",
-    "main.949eeeae.css.map": "https://bruno3a.github.io/portfolio/static/css/main.949eeeae.css.map",
-    "main.1fb4d317.js.map": "https://bruno3a.github.io/portfolio/static/js/main.1fb4d317.js.map"
+    "main.css": "/CV--Site/static/css/main.949eeeae.css",
+    "main.js": "/CV--Site/static/js/main.ae75e9e4.js",
+    "index.html": "/CV--Site/index.html",
+    "main.949eeeae.css.map": "/CV--Site/static/css/main.949eeeae.css.map",
+    "main.ae75e9e4.js.map": "/CV--Site/static/js/main.ae75e9e4.js.map"
   },
   "entrypoints": [
     "static/css/main.949eeeae.css",
-    "static/js/main.1fb4d317.js"
+    "static/js/main.ae75e9e4.js"
   ]
 }
