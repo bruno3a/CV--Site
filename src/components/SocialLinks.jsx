@@ -36,9 +36,12 @@ const SocialLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
-            className="text-primary hover:text-primary-light"
+            className="social-icon-link relative text-primary hover:text-primary-light"
           >
-            {link.icon}
+            <div className="relative">
+              {link.icon}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent shine-effect" />
+            </div>
           </motion.a>
         ))}
       </div>
@@ -47,4 +50,5 @@ const SocialLinks = () => {
 };
 
 export default SocialLinks;
+
 

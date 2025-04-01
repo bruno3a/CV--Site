@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "Bruno Trezza",
+    "roles": {
+      "business_analyst": "Business Analyst",
+      "product_owner": "Product Owner",
+      "ai_enthusiast": "AI Enthusiast",
+      "data_follower": "Data Follower"
+    }
+  },
+  "about": {
+    "description": "With over 8 years of experience in business analysis and product management, I specialize in bridging the gap between business needs and technical solutions. My approach combines analytical thinking with strategic vision to deliver impactful results.",
+    "stats": {
+      "years": "Years Experience",
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "awards": "Awards Received"
+    },
+    "cta": "Let's Talk"
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "skills": "Skills",
+    "contact": "Contact"
+  }
+}

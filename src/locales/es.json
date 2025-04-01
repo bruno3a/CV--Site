@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "Bruno Trezza",
+    "roles": {
+      "business_analyst": "Analista de Negocios",
+      "product_owner": "Product Owner",
+      "ai_enthusiast": "Entusiasta de IA",
+      "data_follower": "Seguidor de Datos"
+    }
+  },
+  "about": {
+    "description": "Con más de 8 años de experiencia en análisis de negocios y gestión de productos, me especializo en cerrar la brecha entre las necesidades comerciales y las soluciones técnicas. Mi enfoque combina pensamiento analítico con visión estratégica para entregar resultados impactantes.",
+    "stats": {
+      "years": "Años de Experiencia",
+      "projects": "Proyectos Completados",
+      "clients": "Clientes Satisfechos",
+      "awards": "Premios Recibidos"
+    },
+    "cta": "Hablemos"
+  },
+  "nav": {
+    "about": "Sobre Mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "education": "Educación",
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  }
+}

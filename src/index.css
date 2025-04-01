@@ -73,3 +73,19 @@
     transform: translateY(0);
   }
 }
+
+/* Shine effect para íconos sociales */
+.social-icon-link {
+  overflow: hidden;
+}
+
+.shine-effect {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.social-icon-link:hover .shine-effect {
+  opacity: 1;
+  transform: translateX(100%);
+}
