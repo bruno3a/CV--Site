@@ -11,11 +11,12 @@
   },
   "about": {
     "description": "With over 8 years of experience in business analysis and product management, I specialize in bridging the gap between business needs and technical solutions. My approach combines analytical thinking with strategic vision to deliver impactful results.",
+    "extended_description": "As a Product Owner I am pleased to know my decisions improve other's lives. With my data centric perspective, I enjoy discussing about product definitions and user experience. I love technology and I'm proud it is part of my profession. I am empathic, responsible, I learn fast and I'm looking for challenges with great impact that allow me as well to maintain a continuous discovery, giving me the chance to stand out and be recognized",
     "stats": {
       "years": "Years Experience",
-      "projects": "Projects Completed",
+      "projects": "Projects Involved",
       "clients": "Happy Clients",
-      "awards": "Awards Received"
+      "areas": "Business Areas"
     },
     "cta": "Let's Talk"
   },
@@ -32,5 +33,7 @@
     "coming_soon": "Coming soon..."
   }
 }
+
+
 
 

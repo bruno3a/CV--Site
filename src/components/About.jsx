@@ -28,7 +28,7 @@ const About = () => {
       >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Imagen de perfil */}
+            {/* Profile Image */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -43,42 +43,73 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Decorative elements */}
-              <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full border-2 border-primary rounded-2xl" />
             </motion.div>
 
-            {/* Contenido */}
+            {/* Text Content */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-6"
+              className="space-y-6 max-w-full"
             >
-              <p className="text-gray-300 mb-6">
-                {t('about.description')}
-              </p>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="card">
-                  <h3 className="text-xl font-bold text-primary mb-2">8+</h3>
-                  <p className="text-gray-400">{t('about.stats.years')}</p>
-                </div>
-                <div className="card">
-                  <h3 className="text-xl font-bold text-primary mb-2">50+</h3>
-                  <p className="text-gray-400">{t('about.stats.projects')}</p>
-                </div>
-                <div className="card">
-                  <h3 className="text-xl font-bold text-primary mb-2">30+</h3>
-                  <p className="text-gray-400">{t('about.stats.clients')}</p>
-                </div>
-                <div className="card">
-                  <h3 className="text-xl font-bold text-primary mb-2">15+</h3>
-                  <p className="text-gray-400">{t('about.stats.awards')}</p>
-                </div>
+              <div className="space-y-4">
+                <p className="text-lg text-gray-300">
+                  {t('about.description')}
+                </p>
+                <p className="text-lg text-gray-300">
+                  {t('about.extended_description')}
+                </p>
               </div>
 
-              <div className="flex gap-4 mt-8 relative z-30">
+              {/* Stats Cards */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8 w-full">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className="card p-4 text-center"
+                >
+                  <div className="text-2xl font-bold text-primary">8+</div>
+                  <div className="text-sm text-gray-400">{t('about.stats.years')}</div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
+                  className="card p-4 text-center"
+                >
+                  <div className="text-2xl font-bold text-primary">7</div>
+                  <div className="text-sm text-gray-400">{t('about.stats.projects')}</div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                  className="card p-4 text-center"
+                >
+                  <div className="text-2xl font-bold text-primary">10+</div>
+                  <div className="text-sm text-gray-400">{t('about.stats.clients')}</div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.9 }}
+                  className="card p-4 text-center"
+                >
+                  <div className="text-2xl font-bold text-primary">5</div>
+                  <div className="text-sm text-gray-400">{t('about.stats.areas')}</div>
+                </motion.div>
+              </div>
+
+              <div className="flex gap-4 mt-8">
                 <a 
                   href="#contact" 
                   className="button-primary inline-block"
@@ -88,7 +119,7 @@ const About = () => {
                 
                 <button
                   onClick={handleDownloadCV}
-                  className="button-outline inline-flex items-center gap-2 cursor-pointer hover:bg-primary hover:text-white"
+                  className="button-outline inline-flex items-center gap-2"
                 >
                   <FaFileDownload />
                   {t('hero.download_cv')}
@@ -103,6 +134,10 @@ const About = () => {
 };
 
 export default About;
+
+
+
+
 
 
 
