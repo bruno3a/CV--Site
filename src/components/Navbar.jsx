@@ -36,10 +36,10 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold text-primary">Curriculum Vitae - Bruno Trezza</a>
+          <a href="#" className="text-2xl font-bold text-primary">CV - Bruno Trezza</a>
           
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          {/* Desktop Menu - Added mr-20 to create space on the right */}
+          <div className="hidden md:flex space-x-8 mr-20">
             <NavLink href="#about">{t('nav.about')}</NavLink>
             <NavLink href="#experience">{t('nav.experience')}</NavLink>
             <NavLink href="#projects">{t('nav.projects')}</NavLink>

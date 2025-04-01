@@ -22,7 +22,17 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en');
+  // Get initial language from localStorage or default to 'en'
+  const [language, setLanguage] = useState(() => {
+    const savedLang = localStorage.getItem('preferredLanguage');
+    return savedLang || 'en';
+  });
+
+  // Update language and save to localStorage
+  const handleLanguageChange = (newLang) => {
+    setLanguage(newLang);
+    localStorage.setItem('preferredLanguage', newLang);
+  };
 
   const translate = (key) => {
     const keys = key.split('.');
@@ -32,6 +42,7 @@ export const LanguageProvider = ({ children }) => {
       if (translation && translation[k]) {
         translation = translation[k];
       } else {
+        console.warn(`Translation missing for key: ${key} in language: ${language}`);
         return key;
       }
     }
@@ -41,7 +52,7 @@ export const LanguageProvider = ({ children }) => {
 
   const value = {
     language,
-    setLanguage,
+    setLanguage: handleLanguageChange,
     t: translate,
   };
 
