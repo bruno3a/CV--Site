@@ -34,7 +34,7 @@ jobs:
         run: npm run build
         env:
           CI: false
-          PUBLIC_URL: .
+          PUBLIC_URL: https://bruno3a.github.io/portfolio
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -54,5 +54,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
 
