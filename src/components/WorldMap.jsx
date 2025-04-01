@@ -9,91 +9,91 @@ const WorldMap = () => {
       country: "Chile",
       projects: 1,
       description: "RAG Implementation on chatbot",
-      flag: "🇨🇱"
+      flagUrl: "https://flagcdn.com/cl.svg"
     },
     {
       country: "Guatemala",
       projects: 1,
       description: "CRM Implementation",
-      flag: "🇬🇹"
+      flagUrl: "https://flagcdn.com/gt.svg"
     },
     {
       country: "Panamá",
       projects: 1,
       description: "CRM Implementation",
-      flag: "🇵🇦"
+      flagUrl: "https://flagcdn.com/pa.svg"
     },
     {
       country: "México",
       projects: 1,
       description: "Stakeholder Management",
-      flag: "🇲🇽"
+      flagUrl: "https://flagcdn.com/mx.svg"
     },
     {
       country: "Honduras",
       projects: 1,
       description: "CRM Implementation",
-      flag: "🇭🇳"
+      flagUrl: "https://flagcdn.com/hn.svg"
     },
     {
       country: "El Salvador",
       projects: 1,
       description: "CRM Implementation",
-      flag: "🇸🇻"
+      flagUrl: "https://flagcdn.com/sv.svg"
     },
     {
       country: "Nicaragua",
       projects: 1,
       description: "CRM Implementation",
-      flag: "🇳🇮"
+      flagUrl: "https://flagcdn.com/ni.svg"
     },
     {
       country: "Costa Rica",
       projects: 1,
       description: "Cloud services",
-      flag: "🇨🇷"
+      flagUrl: "https://flagcdn.com/cr.svg"
     },
     {
       country: "United States",
       projects: 20,
       description: "RAG Implementation on chatbot | Stakeholder Management",
-      flag: "🇺🇸"
+      flagUrl: "https://flagcdn.com/us.svg"
     },
     {
       country: "España",
       projects: 2,
       description: "IT outsourcing - collaboration",
-      flag: "🇪🇸"
+      flagUrl: "https://flagcdn.com/es.svg"
     },
     {
       country: "United Kingdom",
       projects: 1,
       description: "IT outsourcing - collaboration | Stakeholder Management",
-      flag: "🇬🇧"
+      flagUrl: "https://flagcdn.com/gb.svg"
     },
     {
       country: "India",
       projects: 3,
       description: "IT outsourcing | Stakeholder Management",
-      flag: "🇮🇳"
+      flagUrl: "https://flagcdn.com/in.svg"
     },
     {
       country: "Ukraine",
       projects: 3,
       description: "IT outsourcing",
-      flag: "🇺🇦"
+      flagUrl: "https://flagcdn.com/ua.svg"
     },
     {
       country: "Argentina",
       projects: 1,
       description: "ERP Implementation",
-      flag: "🇦🇷"
+      flagUrl: "https://flagcdn.com/ar.svg"
     },
     {
       country: "Brazil",
       projects: 1,
       description: "RAG Implementation on chatbot",
-      flag: "🇧🇷"
+      flagUrl: "https://flagcdn.com/br.svg"
     }
   ];
 
@@ -110,9 +110,12 @@ const WorldMap = () => {
             className="bg-background-light rounded-lg p-4 hover:bg-background-dark transition-colors"
           >
             <div className="flex items-center justify-between mb-3">
-              <span className="text-3xl" role="img" aria-label={`${experience.country} flag`}>
-                {experience.flag}
-              </span>
+              <img 
+                src={experience.flagUrl}
+                alt={`${experience.country} flag`}
+                className="w-8 h-6 object-cover rounded shadow-sm"
+                loading="lazy"
+              />
               <span className="text-primary font-bold">
                 {experience.projects}
                 <span className="text-sm ml-1">projects</span>
@@ -128,6 +131,7 @@ const WorldMap = () => {
 };
 
 export default WorldMap;
+
 
 
 
