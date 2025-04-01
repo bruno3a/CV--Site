@@ -171,8 +171,77 @@
         ]
       }
     }
+  },
+  "skills": {
+    "title": "Навыки",
+    "categories": {
+      "business_analysis": {
+        "title": "Бизнес-анализ",
+        "skills": {
+          "requirements_gathering": "Сбор требований",
+          "process_modeling": "Моделирование процессов",
+          "stakeholder_management": "Управление стейкхолдерами",
+          "data_analysis": "Анализ данных"
+        }
+      },
+      "product_management": {
+        "title": "Управление продуктом",
+        "skills": {
+          "product_strategy": "Продуктовая стратегия",
+          "roadmap_planning": "Планирование роадмапа",
+          "user_story_mapping": "Мапинг пользовательских историй",
+          "product_analytics": "Продуктовая аналитика"
+        }
+      },
+      "methodologies": {
+        "title": "Методологии",
+        "skills": {
+          "agile_scrum": "Agile/Scrum",
+          "kanban": "Канбан",
+          "lean": "Бережливое производство",
+          "design_thinking": "Дизайн-мышление"
+        }
+      },
+      "technical": {
+        "title": "Технические навыки",
+        "skills": {
+          "sql": "SQL",
+          "python": "Python",
+          "api_management": "Управление API",
+          "data_visualization": "Визуализация данных"
+        }
+      }
+    }
+  },
+  "contact": {
+    "location": {
+      "title": "Местоположение",
+      "value": "Буэнос-Айрес, Аргентина"
+    }
+  },
+  "chat": {
+    "title": "Чат с Ассистентом Бруно",
+    "coming_soon": "Скоро будет доступно...",
+    "placeholder": "Введите ваше сообщение...",
+    "start_message": "Привет! Я ассистент Бруно. Как я могу помочь вам сегодня?",
+    "buttons": {
+      "send": "Отправить",
+      "clear": "Очистить чат"
+    },
+    "status": {
+      "connecting": "Подключение...",
+      "offline": "Не в сети",
+      "online": "В сети"
+    },
+    "errors": {
+      "connection": "Ошибка подключения. Пожалуйста, попробуйте снова.",
+      "message_failed": "Не удалось отправить сообщение"
+    }
   }
 }
+
+
+
 
 
 

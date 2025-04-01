@@ -1,45 +1,48 @@
 import { motion } from 'framer-motion';
-
-const skillCategories = [
-  {
-    title: "Business Analysis",
-    skills: [
-      { name: "Requirements Gathering", level: 87 },
-      { name: "Process Modeling", level: 80 },
-      { name: "Stakeholder Management", level: 95 },
-      { name: "Data Analysis", level: 85 },
-    ],
-  },
-  {
-    title: "Product Management",
-    skills: [
-      { name: "Product Strategy", level: 92 },
-      { name: "Roadmap Planning", level: 90 },
-      { name: "User Story Mapping", level: 85 },
-      { name: "Product Analytics", level: 85 },
-    ],
-  },
-  {
-    title: "Methodologies",
-    skills: [
-      { name: "Agile/Scrum", level: 95 },
-      { name: "Kanban", level: 90 },
-      { name: "Lean", level: 75 },
-      { name: "Design Thinking", level: 75 },
-    ],
-  },
-  {
-    title: "Tools",
-    skills: [
-      { name: "Jira", level: 85 },
-      { name: "Confluence", level: 80 },
-      { name: "Tableau", level: 75 },
-      { name: "Figma", level: 85 },
-    ],
-  },
-];
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Skills = () => {
+  const { t } = useLanguage();
+
+  const skillCategories = [
+    {
+      title: t('skills.categories.business_analysis.title'),
+      skills: [
+        { name: t('skills.categories.business_analysis.skills.requirements_gathering'), level: 87 },
+        { name: t('skills.categories.business_analysis.skills.process_modeling'), level: 80 },
+        { name: t('skills.categories.business_analysis.skills.stakeholder_management'), level: 95 },
+        { name: t('skills.categories.business_analysis.skills.data_analysis'), level: 85 },
+      ],
+    },
+    {
+      title: t('skills.categories.product_management.title'),
+      skills: [
+        { name: t('skills.categories.product_management.skills.product_strategy'), level: 92 },
+        { name: t('skills.categories.product_management.skills.roadmap_planning'), level: 90 },
+        { name: t('skills.categories.product_management.skills.user_story_mapping'), level: 85 },
+        { name: t('skills.categories.product_management.skills.product_analytics'), level: 85 },
+      ],
+    },
+    {
+      title: t('skills.categories.methodologies.title'),
+      skills: [
+        { name: t('skills.categories.methodologies.skills.agile_scrum'), level: 95 },
+        { name: t('skills.categories.methodologies.skills.kanban'), level: 90 },
+        { name: t('skills.categories.methodologies.skills.lean'), level: 75 },
+        { name: t('skills.categories.methodologies.skills.design_thinking'), level: 75 },
+      ],
+    },
+    {
+      title: t('skills.categories.technical.title'),
+      skills: [
+        { name: t('skills.categories.technical.skills.sql'), level: 85 },
+        { name: t('skills.categories.technical.skills.python'), level: 80 },
+        { name: t('skills.categories.technical.skills.api_management'), level: 90 },
+        { name: t('skills.categories.technical.skills.data_visualization'), level: 85 },
+      ],
+    },
+  ];
+
   return (
     <section id="skills" className="section-container">
       <motion.div

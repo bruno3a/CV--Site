@@ -13,10 +13,14 @@
     "description": "Con más de 8 años de experiencia en análisis de negocios y gestión de productos, me especializo en cerrar la brecha entre las necesidades comerciales y las soluciones técnicas. Mi enfoque combina el pensamiento analítico con la visión estratégica para entregar resultados impactantes.",
     "extended_description": "Como Product Owner me complace saber que mis decisiones mejoran la vida de otros. Con mi perspectiva centrada en datos, disfruto discutiendo sobre definiciones de producto y experiencia de usuario. Amo la tecnología y estoy orgulloso de que sea parte de mi profesión. Soy empático, responsable, aprendo rápido y busco desafíos con gran impacto que me permitan mantener un descubrimiento continuo, dándome la oportunidad de destacar y ser reconocido",
     "stats": {
+      "years_value": "8+",
+      "projects_value": "7",
+      "clients_value": "10+",
+      "areas_value": "5",
       "years": "Años de Experiencia",
-      "projects": "Participación en Proyectos",
+      "projects": "Proyectos Involucrados",
       "clients": "Clientes Satisfechos",
-      "areas": "Rubros"
+      "areas": "Áreas de Negocio"
     },
     "cta": "Hablemos"
   },
@@ -29,8 +33,23 @@
     "contact": "Contacto"
   },
   "chat": {
-    "title": "Conversación con asistente de Bruno",
-    "coming_soon": "Próximamente..."
+    "title": "Chat con el Asistente de Bruno",
+    "coming_soon": "Próximamente...",
+    "placeholder": "Escribe tu mensaje...",
+    "start_message": "¡Hola! Soy el asistente de Bruno. ¿En qué puedo ayudarte hoy?",
+    "buttons": {
+      "send": "Enviar",
+      "clear": "Limpiar chat"
+    },
+    "status": {
+      "connecting": "Conectando...",
+      "offline": "Desconectado",
+      "online": "En línea"
+    },
+    "errors": {
+      "connection": "Error de conexión. Por favor, intenta nuevamente.",
+      "message_failed": "Error al enviar el mensaje"
+    }
   },
   "experience": {
     "title": "Experiencia",
@@ -84,27 +103,33 @@
     "items": {
       "ai_chatbot": {
         "title": "Chatbot Asistido por IA (RAG)",
-        "description": "Implementación de un chatbot con Generación Aumentada por Recuperación usando LangChain y documentación empresarial, mejorando la precisión de respuestas en un 85% y reduciendo tickets de soporte en un 40%"
+        "description": "Implementación de un chatbot con Generación Aumentada por Recuperación usando LangChain y documentación empresarial, mejorando la precisión de respuestas en un 85% y reduciendo tickets de soporte en un 40%",
+        "tags": ["LLMs", "RAG", "Python", "Azure", "Vector DB", "LangChain"]
       },
       "erp_implementation": {
         "title": "Descubrimiento e Implementación de ERP",
-        "description": "Lideré la fase de descubrimiento e implementación de un sistema ERP empresarial, coordinando con stakeholders de 5 departamentos y gestionando la integración con sistemas legacy"
+        "description": "Lideré la fase de descubrimiento e implementación de un sistema ERP empresarial, coordinando con stakeholders de 5 departamentos y gestionando la integración con sistemas legacy",
+        "tags": ["Análisis de Negocio", "Optimización de Procesos", "Gestión del Cambio", "ERP", "Integración"]
       },
       "cpq_implementation": {
-        "title": "Implementación de CPQ",
-        "description": "Gestioné la implementación de una solución Configure-Price-Quote en 5 países de Centroamérica, logrando una reducción del 60% en el tiempo de generación de cotizaciones y un aumento del 30% en la precisión de ventas"
+        "title": "Implementación de Sistema CPQ",
+        "description": "Gestioné la implementación de un sistema Configure-Price-Quote en múltiples países, optimizando procesos de venta y reduciendo el tiempo de generación de cotizaciones en un 60%",
+        "tags": ["CPQ", "Operaciones de Venta", "Multi-país", "Diseño de Procesos", "Capacitación"]
       },
       "api_catalog": {
-        "title": "Gestión de Catálogo de APIs",
-        "description": "Desarrollé y mantuve un sistema de catálogo de APIs empresarial, implementando políticas de gobernanza y mejorando el descubrimiento y la reutilización de APIs en toda la organización"
+        "title": "Catálogo de Gestión de APIs",
+        "description": "Desarrollé e implementé una solución de catálogo de APIs empresarial, mejorando la experiencia del desarrollador y reduciendo el tiempo de integración en un 40% mediante documentación y gobierno estandarizados",
+        "tags": ["Gestión de APIs", "Documentación", "Gobierno", "Azure", "Experiencia de Desarrollador"]
       },
-      "portfolio_website": {
-        "title": "Página Web de CV Personal",
-        "description": "Diseñé y desarrollé un sitio web personal responsivo usando React y Tailwind CSS, con soporte multi-idioma y componentes interactivos"
+      "portfolio": {
+        "title": "Sitio Web de Portfolio Personal",
+        "description": "Diseñé y desarrollé un sitio web portfolio personal responsive usando React y Tailwind CSS, con soporte multi-idioma y componentes interactivos",
+        "tags": ["React", "Tailwind CSS", "Frontend", "UI/UX", "Marca Personal"]
       },
-      "ecommerce_platform": {
+      "ecommerce": {
         "title": "Plataforma de Integración eCommerce",
-        "description": "Actualmente desarrollando una solución de comercio electrónico con sistema de facturación integrado y conectividad con Mercado Libre, enfocado en la gestión automatizada de inventario y pedidos"
+        "description": "Actualmente desarrollando una solución de comercio electrónico con sistema de facturación integrado y conexión con Mercado Libre, enfocado en la gestión automatizada de inventario y pedidos",
+        "tags": ["eCommerce", "Integración API", "Marketplace", "En Progreso", "Diseño de Sistemas"]
       }
     }
   },
@@ -136,6 +161,85 @@
         "message": "Mensaje",
         "send": "Enviar Mensaje"
       }
+    }
+  },
+  "languages": {
+    "spanish": "Español",
+    "english": "Inglés",
+    "portuguese": "Portugués",
+    "russian": "Ruso"
+  },
+  "education": {
+    "items": {
+      "data_science": {
+        "degree": "Analista en Ciencia de Datos",
+        "institution": "Digital House",
+        "period": "Febrero 2021",
+        "description": "Formación completa en análisis de datos, estadística y técnicas de machine learning.",
+        "achievements": [
+          "Desarrollo de modelos predictivos y de clasificación usando Python",
+          "Trabajo en proyectos de toma de decisiones basadas en datos",
+          "Experiencia práctica con SQL y herramientas de visualización"
+        ]
+      },
+      "business": {
+        "degree": "Licenciatura en Administración de Empresas",
+        "institution": "Universidad de Buenos Aires",
+        "period": "2009 - 2015",
+        "description": "Enfoque en estrategia empresarial, comportamiento organizacional y eficiencia operativa.",
+        "achievements": [
+          "Fortalecimiento de habilidades de liderazgo y gestión de proyectos",
+          "Investigación sobre optimización de procesos empresariales",
+          "Participación en competencias de casos de estudio"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "categories": {
+      "business_analysis": {
+        "title": "Análisis de Negocios",
+        "skills": {
+          "requirements_gathering": "Levantamiento de Requerimientos",
+          "process_modeling": "Modelado de Procesos",
+          "stakeholder_management": "Gestión de Stakeholders",
+          "data_analysis": "Análisis de Datos"
+        }
+      },
+      "product_management": {
+        "title": "Gestión de Productos",
+        "skills": {
+          "product_strategy": "Estrategia de Producto",
+          "roadmap_planning": "Planificación de Roadmap",
+          "user_story_mapping": "Mapeo de Historias de Usuario",
+          "product_analytics": "Analítica de Producto"
+        }
+      },
+      "methodologies": {
+        "title": "Metodologías",
+        "skills": {
+          "agile_scrum": "Agile/Scrum",
+          "kanban": "Kanban",
+          "lean": "Lean",
+          "design_thinking": "Design Thinking"
+        }
+      },
+      "technical": {
+        "title": "Habilidades Técnicas",
+        "skills": {
+          "sql": "SQL",
+          "python": "Python",
+          "api_management": "Gestión de APIs",
+          "data_visualization": "Visualización de Datos"
+        }
+      }
+    }
+  },
+  "contact": {
+    "location": {
+      "title": "Ubicación",
+      "value": "Buenos Aires, Argentina"
     }
   }
 }

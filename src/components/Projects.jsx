@@ -2,48 +2,48 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const projects = [
-  {
-    title: "AI Assisted Chatbot (RAG)",
-    description: "Implemented a Retrieval-Augmented Generation chatbot using LangChain and enterprise documentation, improving response accuracy by 85% and reducing support tickets by 40%",
-    image: `${process.env.PUBLIC_URL}/projects/ai-chatbot.jpg`,
-    tags: ["LLMs", "RAG", "Python", "Azure", "Vector DB", "LangChain"],
-  },
-  {
-    title: "ERP Discovery & Implementation",
-    description: "Led the discovery phase and implementation of an enterprise-wide ERP system, coordinating with stakeholders across 5 departments and managing integration with legacy systems",
-    image: `${process.env.PUBLIC_URL}/projects/erp-system.jpg`,
-    tags: ["Business Analysis", "Process Optimization", "Change Management", "ERP", "Integration"],
-  },
-  {
-    title: "CPQ Implementation",
-    description: "Managed the implementation of a Configure-Price-Quote solution across 5 countries in Central America, resulting in a 60% reduction in quote generation time and 30% increase in sales accuracy",
-    image: `${process.env.PUBLIC_URL}/projects/cpq-system.jpg`,
-    tags: ["CPQ", "Sales Operations", "Multi-country", "Process Design", "Training"],
-  },
-  {
-    title: "API Catalog Management",
-    description: "Developed and maintained an enterprise API catalog system, implementing governance policies and improving API discovery and reusability across the organization",
-    image: `${process.env.PUBLIC_URL}/projects/api-catalog.jpg`,
-    tags: ["API Management", "Documentation", "Governance", "Azure", "Developer Experience"],
-  },
-  {
-    title: "Personal CV Webpage",
-    description: "Designed and developed a responsive personal portfolio website using React and Tailwind CSS, featuring multi-language support and interactive components",
-    image: `${process.env.PUBLIC_URL}/projects/portfolio-site.jpg`,
-    tags: ["React", "Tailwind CSS", "Frontend", "UI/UX", "Personal Branding"],
-  },
-  {
-    title: "eCommerce Integration Platform",
-    description: "Currently developing an eCommerce solution with integrated billing system and Mercado Libre marketplace connectivity, focusing on automated inventory and order management",
-    image: `${process.env.PUBLIC_URL}/projects/ecommerce-integration.jpg`,
-    tags: ["eCommerce", "API Integration", "Marketplace", "In Progress", "System Design"],
-  },
-];
-
 const Projects = () => {
   const { t } = useLanguage();
   const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const projects = [
+    {
+      title: t('projects.items.ai_chatbot.title'),
+      description: t('projects.items.ai_chatbot.description'),
+      image: `${process.env.PUBLIC_URL}/projects/ai-chatbot.jpg`,
+      tags: ["LLMs", "RAG", "Python", "Azure", "Vector DB", "LangChain"],
+    },
+    {
+      title: t('projects.items.erp_implementation.title'),
+      description: t('projects.items.erp_implementation.description'),
+      image: `${process.env.PUBLIC_URL}/projects/erp-system.jpg`,
+      tags: ["Business Analysis", "Process Optimization", "Change Management", "ERP", "Integration"],
+    },
+    {
+      title: t('projects.items.cpq_implementation.title'),
+      description: t('projects.items.cpq_implementation.description'),
+      image: `${process.env.PUBLIC_URL}/projects/cpq-system.jpg`,
+      tags: ["CPQ", "Sales Operations", "Multi-country", "Process Design", "Training"],
+    },
+    {
+      title: t('projects.items.api_catalog.title'),
+      description: t('projects.items.api_catalog.description'),
+      image: `${process.env.PUBLIC_URL}/projects/api-catalog.jpg`,
+      tags: ["API Management", "Documentation", "Governance", "Azure", "Developer Experience"],
+    },
+    {
+      title: t('projects.items.portfolio.title'),
+      description: t('projects.items.portfolio.description'),
+      image: `${process.env.PUBLIC_URL}/projects/portfolio-site.jpg`,
+      tags: ["React", "Tailwind CSS", "Frontend", "UI/UX", "Personal Branding"],
+    },
+    {
+      title: t('projects.items.ecommerce.title'),
+      description: t('projects.items.ecommerce.description'),
+      image: `${process.env.PUBLIC_URL}/projects/ecommerce-integration.jpg`,
+      tags: ["eCommerce", "API Integration", "Marketplace", "In Progress", "System Design"],
+    },
+  ];
 
   return (
     <section id="projects" className="section-container">

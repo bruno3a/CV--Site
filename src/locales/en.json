@@ -13,6 +13,10 @@
     "description": "With over 8 years of experience in business analysis and product management, I specialize in bridging the gap between business needs and technical solutions. My approach combines analytical thinking with strategic vision to deliver impactful results.",
     "extended_description": "As a Product Owner I am pleased to know my decisions improve other's lives. With my data centric perspective, I enjoy discussing about product definitions and user experience. I love technology and I'm proud it is part of my profession. I am empathic, responsible, I learn fast and I'm looking for challenges with great impact that allow me as well to maintain a continuous discovery, giving me the chance to stand out and be recognized",
     "stats": {
+      "years_value": "8+",
+      "projects_value": "7",
+      "clients_value": "10+",
+      "areas_value": "5",
       "years": "Years Experience",
       "projects": "Projects Involved",
       "clients": "Happy Clients",
@@ -80,47 +84,137 @@
     "items": {
       "ai_chatbot": {
         "title": "AI Assisted Chatbot (RAG)",
-        "description": "Implemented a Retrieval-Augmented Generation chatbot using LangChain and enterprise documentation, improving response accuracy by 85% and reducing support tickets by 40%"
+        "description": "Implemented a Retrieval-Augmented Generation chatbot using LangChain and enterprise documentation, improving response accuracy by 85% and reducing support tickets by 40%",
+        "tags": ["LLMs", "RAG", "Python", "Azure", "Vector DB", "LangChain"]
       },
       "erp_implementation": {
         "title": "ERP Discovery & Implementation",
-        "description": "Led the discovery phase and implementation of an enterprise-wide ERP system, coordinating with stakeholders across 5 departments and managing integration with legacy systems"
+        "description": "Led the discovery phase and implementation of an enterprise-wide ERP system, coordinating with stakeholders across 5 departments and managing integration with legacy systems",
+        "tags": ["Business Analysis", "Process Optimization", "Change Management", "ERP", "Integration"]
       },
       "cpq_implementation": {
-        "title": "CPQ Implementation",
-        "description": "Managed the implementation of a Configure-Price-Quote solution across 5 countries in Central America, resulting in a 60% reduction in quote generation time and 30% increase in sales accuracy"
+        "title": "CPQ System Implementation",
+        "description": "Managed the implementation of a Configure-Price-Quote system across multiple countries, streamlining sales processes and reducing quote generation time by 60%",
+        "tags": ["CPQ", "Sales Operations", "Multi-country", "Process Design", "Training"]
       },
       "api_catalog": {
-        "title": "API Catalog Management",
-        "description": "Developed and maintained an enterprise API catalog system, implementing governance policies and improving API discovery and reusability across the organization"
+        "title": "API Management Catalog",
+        "description": "Developed and implemented an enterprise API catalog solution, improving developer experience and reducing integration time by 40% through standardized documentation and governance",
+        "tags": ["API Management", "Documentation", "Governance", "Azure", "Developer Experience"]
       },
-      "portfolio_website": {
-        "title": "Personal CV Webpage",
-        "description": "Designed and developed a responsive personal portfolio website using React and Tailwind CSS, featuring multi-language support and interactive components"
+      "portfolio": {
+        "title": "Personal Portfolio Website",
+        "description": "Designed and developed a responsive personal portfolio website using React and Tailwind CSS, featuring multi-language support and interactive components",
+        "tags": ["React", "Tailwind CSS", "Frontend", "UI/UX", "Personal Branding"]
       },
-      "ecommerce_platform": {
+      "ecommerce": {
         "title": "eCommerce Integration Platform",
-        "description": "Currently developing an eCommerce solution with integrated billing system and Mercado Libre marketplace connectivity, focusing on automated inventory and order management"
+        "description": "Currently developing an eCommerce solution with integrated billing system and Mercado Libre connection, focusing on automated inventory and order management",
+        "tags": ["eCommerce", "API Integration", "Marketplace", "In Progress", "System Design"]
       }
     }
   },
   "skills": {
     "title": "Skills",
-    "technical": "Technical Skills",
-    "soft": "Soft Skills"
+    "categories": {
+      "business_analysis": {
+        "title": "Business Analysis",
+        "skills": {
+          "requirements_gathering": "Requirements Gathering",
+          "process_modeling": "Process Modeling",
+          "stakeholder_management": "Stakeholder Management",
+          "data_analysis": "Data Analysis"
+        }
+      },
+      "product_management": {
+        "title": "Product Management",
+        "skills": {
+          "product_strategy": "Product Strategy",
+          "roadmap_planning": "Roadmap Planning",
+          "user_story_mapping": "User Story Mapping",
+          "product_analytics": "Product Analytics"
+        }
+      },
+      "methodologies": {
+        "title": "Methodologies",
+        "skills": {
+          "agile_scrum": "Agile/Scrum",
+          "kanban": "Kanban",
+          "lean": "Lean",
+          "design_thinking": "Design Thinking"
+        }
+      },
+      "technical": {
+        "title": "Technical Skills",
+        "skills": {
+          "sql": "SQL",
+          "python": "Python",
+          "api_management": "API Management",
+          "data_visualization": "Data Visualization"
+        }
+      }
+    }
   },
   "education": {
     "title": "Education & Certifications",
-    "languages": "Languages"
+    "items": {
+      "data_science": {
+        "degree": "Data Science Analyst",
+        "institution": "Digital House",
+        "period": "February 2021",
+        "description": "Completed training in data analysis, statistics, and machine learning techniques.",
+        "achievements": [
+          "Developed predictive and classification models using Python",
+          "Worked on data-driven decision-making projects",
+          "Gained hands-on experience with SQL and visualization tools"
+        ]
+      },
+      "business": {
+        "degree": "Bachelor in Business Management",
+        "institution": "Buenos Aires University",
+        "period": "2009 - 2015",
+        "description": "Focused on business strategy, organizational behavior, and operational efficiency.",
+        "achievements": [
+          "Strengthened leadership and project management skills",
+          "Conducted research on business process optimization",
+          "Participated in case study competitions"
+        ]
+      }
+    },
+    "languages": "Languages",
+    "levels": {
+      "native": "Native",
+      "advanced": "Advanced",
+      "basic": "Basic"
+    }
   },
   "contact": {
     "title": "Contact",
     "get_in_touch": "Get in Touch",
-    "send_message": "Send Message"
+    "send_message": "Send Message",
+    "location": {
+      "title": "Location",
+      "value": "Buenos Aires, Argentina"
+    }
   },
   "chat": {
-    "title": "Conversation with Bruno's assistant",
-    "coming_soon": "Coming soon..."
+    "title": "Chat with Bruno's Assistant",
+    "coming_soon": "Coming soon...",
+    "placeholder": "Type your message...",
+    "start_message": "Hi! I'm Bruno's assistant. How can I help you today?",
+    "buttons": {
+      "send": "Send",
+      "clear": "Clear chat"
+    },
+    "status": {
+      "connecting": "Connecting...",
+      "offline": "Offline",
+      "online": "Online"
+    },
+    "errors": {
+      "connection": "Connection error. Please try again.",
+      "message_failed": "Failed to send message"
+    }
   },
   "sections": {
     "projects": {
@@ -151,6 +245,12 @@
         "send": "Send Message"
       }
     }
+  },
+  "languages": {
+    "spanish": "Spanish",
+    "english": "English",
+    "portuguese": "Portuguese",
+    "russian": "Russian"
   }
 }
 

@@ -4,6 +4,7 @@ import esTranslations from '../locales/es.json';
 import ptTranslations from '../locales/pt.json';
 import ruTranslations from '../locales/ru.json';
 
+// Verificar que todas las traducciones estén cargadas
 const translations = {
   en: enTranslations,
   es: esTranslations,
@@ -22,13 +23,11 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-  // Get initial language from localStorage or default to 'en'
   const [language, setLanguage] = useState(() => {
     const savedLang = localStorage.getItem('preferredLanguage');
     return savedLang || 'en';
   });
 
-  // Update language and save to localStorage
   const handleLanguageChange = (newLang) => {
     setLanguage(newLang);
     localStorage.setItem('preferredLanguage', newLang);

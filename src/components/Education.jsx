@@ -2,55 +2,62 @@ import { motion } from 'framer-motion';
 import { IoLanguage } from 'react-icons/io5';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const education = [
-  {
-    degree: "Data Science Analyst",
-    institution: "Digital House",
-    period: "February 2021",
-    description: "Completed training in data analysis, statistics, and machine learning techniques.",
-    achievements: [
-      "Developed predictive models using Python",
-      "Worked on data-driven decision-making projects",
-      "Gained hands-on experience with SQL and visualization tools"
-    ]
-  },
-  {
-    degree: "Bachelor in Business Management",
-    institution: "Buenos Aires University",
-    period: "2009 - 2015",
-    description: "Focused on business strategy, organizational behavior, and operational efficiency.",
-    achievements: [
-      "Strengthened leadership and project management skills",
-      "Conducted research on business process optimization",
-      "Participated in case study competitions"
-    ]
-  }
-];
-
 const Education = () => {
   const { t } = useLanguage();
   
+  // Verificar en la consola si las traducciones están funcionando
+  console.log('Current translations:', {
+    title: t('sections.education.title'),
+    dataScience: t('education.items.data_science.degree'),
+    business: t('education.items.business.degree')
+  });
+
+  const education = [
+    {
+      degree: t('education.items.data_science.degree'),
+      institution: t('education.items.data_science.institution'),
+      period: t('education.items.data_science.period'),
+      description: t('education.items.data_science.description'),
+      achievements: [
+        t('education.items.data_science.achievements.0'),
+        t('education.items.data_science.achievements.1'),
+        t('education.items.data_science.achievements.2')
+      ]
+    },
+    {
+      degree: t('education.items.business.degree'),
+      institution: t('education.items.business.institution'),
+      period: t('education.items.business.period'),
+      description: t('education.items.business.description'),
+      achievements: [
+        t('education.items.business.achievements.0'),
+        t('education.items.business.achievements.1'),
+        t('education.items.business.achievements.2')
+      ]
+    }
+  ];
+
   const languages = [
     { 
-      name: "Spanish", 
+      name: t('languages.spanish'), 
       level: t('sections.education.levels.native'), 
       flag: `${process.env.PUBLIC_URL}/flags/es.svg`,
       progress: 100 
     },
     { 
-      name: "English", 
+      name: t('languages.english'), 
       level: t('sections.education.levels.advanced'), 
       flag: `${process.env.PUBLIC_URL}/flags/us.svg`,
       progress: 90 
     },
     { 
-      name: "Portuguese", 
+      name: t('languages.portuguese'), 
       level: t('sections.education.levels.advanced'), 
       flag: `${process.env.PUBLIC_URL}/flags/br.svg`,
       progress: 85 
     },
     { 
-      name: "Russian", 
+      name: t('languages.russian'), 
       level: t('sections.education.levels.basic'), 
       flag: `${process.env.PUBLIC_URL}/flags/ru.svg`,
       progress: 30 

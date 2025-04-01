@@ -13,10 +13,14 @@
     "description": "Com mais de 8 anos de experiência em análise de negócios e gestão de produtos, sou especializado em fazer a ponte entre necessidades comerciais e soluções técnicas. Minha abordagem combina pensamento analítico com visão estratégica para entregar resultados impactantes.",
     "extended_description": "Como Product Owner, fico feliz em saber que minhas decisões melhoram a vida das pessoas. Com minha perspectiva centrada em dados, gosto de discutir definições de produto e experiência do usuário. Amo tecnologia e tenho orgulho de que seja parte da minha profissão. Sou empático, responsável, aprendo rápido e busco desafios com grande impacto que me permitam manter uma descoberta contínua, dando-me a oportunidade de me destacar e ser reconhecido",
     "stats": {
+      "years_value": "8+",
+      "projects_value": "7",
+      "clients_value": "10+",
+      "areas_value": "5",
       "years": "Anos de Experiência",
-      "projects": "Projetos Concluídos",
+      "projects": "Projetos Envolvidos",
       "clients": "Clientes Satisfeitos",
-      "areas": "Áreas"
+      "areas": "Áreas de Negócio"
     },
     "cta": "Vamos Conversar"
   },
@@ -80,27 +84,33 @@
     "items": {
       "ai_chatbot": {
         "title": "Chatbot Assistido por IA (RAG)",
-        "description": "Implementei um chatbot com Geração Aumentada por Recuperação usando LangChain e documentação empresarial, melhorando a precisão das respostas em 85% e reduzindo tickets de suporte em 40%"
+        "description": "Implementei um chatbot com Geração Aumentada por Recuperação usando LangChain e documentação empresarial, melhorando a precisão das respostas em 85% e reduzindo tickets de suporte em 40%",
+        "tags": ["LLMs", "RAG", "Python", "Azure", "Vector DB", "LangChain"]
       },
       "erp_implementation": {
         "title": "Descoberta e Implementação de ERP",
-        "description": "Liderei a fase de descoberta e implementação de um sistema ERP empresarial, coordenando com stakeholders de 5 departamentos e gerenciando a integração com sistemas legados"
+        "description": "Liderei a fase de descoberta e implementação de um sistema ERP empresarial, coordenando com stakeholders de 5 departamentos e gerenciando a integração com sistemas legados",
+        "tags": ["Análise de Negócios", "Otimização de Processos", "Gestão de Mudanças", "ERP", "Integração"]
       },
       "cpq_implementation": {
-        "title": "Implementação de CPQ",
-        "description": "Gerenciei a implementação de uma solução Configure-Price-Quote em 5 países da América Central, resultando em redução de 60% no tempo de geração de cotações e aumento de 30% na precisão das vendas"
+        "title": "Implementação de Sistema CPQ",
+        "description": "Gerenciei a implementação de um sistema Configure-Price-Quote em múltiplos países, otimizando processos de venda e reduzindo o tempo de geração de cotações em 60%",
+        "tags": ["CPQ", "Operações de Vendas", "Multi-país", "Design de Processos", "Treinamento"]
       },
       "api_catalog": {
-        "title": "Gestão de Catálogo de APIs",
-        "description": "Desenvolvi e mantive um sistema de catálogo de APIs empresarial, implementando políticas de governança e melhorando a descoberta e reutilização de APIs em toda a organização"
+        "title": "Catálogo de Gestão de APIs",
+        "description": "Desenvolvi e implementei uma solução de catálogo de APIs empresarial, melhorando a experiência do desenvolvedor e reduzindo o tempo de integração em 40% através de documentação e governança padronizadas",
+        "tags": ["Gestão de APIs", "Documentação", "Governança", "Azure", "Experiência do Desenvolvedor"]
       },
-      "portfolio_website": {
-        "title": "Página Web de Currículo Pessoal",
-        "description": "Projetei e desenvolvi um site pessoal responsivo usando React e Tailwind CSS, com suporte multi-idioma e componentes interativos"
+      "portfolio": {
+        "title": "Site de Portfólio Pessoal",
+        "description": "Projetei e desenvolvi um site responsivo de portfólio pessoal usando React e Tailwind CSS, com suporte multi-idioma e componentes interativos",
+        "tags": ["React", "Tailwind CSS", "Frontend", "UI/UX", "Marca Pessoal"]
       },
-      "ecommerce_platform": {
+      "ecommerce": {
         "title": "Plataforma de Integração eCommerce",
-        "description": "Atualmente desenvolvendo uma solução de comércio eletrônico com sistema de faturamento integrado e conectividade com Mercado Livre, focado na gestão automatizada de estoque e pedidos"
+        "description": "Atualmente desenvolvendo uma solução de comércio eletrônico com sistema de faturamento integrado e conexão com Mercado Livre, focado na gestão automatizada de estoque e pedidos",
+        "tags": ["eCommerce", "Integração API", "Marketplace", "Em Andamento", "Design de Sistemas"]
       }
     }
   },
@@ -133,8 +143,113 @@
         "send": "Enviar Mensagem"
       }
     }
+  },
+  "languages": {
+    "spanish": "Espanhol",
+    "english": "Inglês",
+    "portuguese": "Português",
+    "russian": "Russo"
+  },
+  "education": {
+    "items": {
+      "data_science": {
+        "degree": "Analista de Ciência de Dados",
+        "institution": "Digital House",
+        "period": "Fevereiro 2021",
+        "description": "Formação completa em análise de dados, estatística e técnicas de machine learning.",
+        "achievements": [
+          "Desenvolvimento de modelos preditivos usando Python",
+          "Trabalho em projetos de tomada de decisão baseada em dados",
+          "Experiência prática com SQL e ferramentas de visualização"
+        ]
+      },
+      "business": {
+        "degree": "Bacharel em Administração de Empresas",
+        "institution": "Universidade de Buenos Aires",
+        "period": "2009 - 2015",
+        "description": "Foco em estratégia empresarial, comportamento organizacional e eficiência operacional.",
+        "achievements": [
+          "Fortalecimento de habilidades de liderança e gestão de projetos",
+          "Pesquisa sobre otimização de processos empresariais",
+          "Participação em competições de estudos de caso"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "categories": {
+      "business_analysis": {
+        "title": "Análise de Negócios",
+        "skills": {
+          "requirements_gathering": "Levantamento de Requisitos",
+          "process_modeling": "Modelagem de Processos",
+          "stakeholder_management": "Gestão de Stakeholders",
+          "data_analysis": "Análise de Dados"
+        }
+      },
+      "product_management": {
+        "title": "Gestão de Produtos",
+        "skills": {
+          "product_strategy": "Estratégia de Produto",
+          "roadmap_planning": "Planejamento de Roadmap",
+          "user_story_mapping": "Mapeamento de Histórias de Usuário",
+          "product_analytics": "Análise de Produto"
+        }
+      },
+      "methodologies": {
+        "title": "Metodologias",
+        "skills": {
+          "agile_scrum": "Agile/Scrum",
+          "kanban": "Kanban",
+          "lean": "Lean",
+          "design_thinking": "Design Thinking"
+        }
+      },
+      "technical": {
+        "title": "Habilidades Técnicas",
+        "skills": {
+          "sql": "SQL",
+          "python": "Python",
+          "api_management": "Gestão de APIs",
+          "data_visualization": "Visualização de Dados"
+        }
+      }
+    }
+  },
+  "contact": {
+    "location": {
+      "title": "Localização",
+      "value": "Buenos Aires, Argentina"
+    }
+  },
+  "chat": {
+    "title": "Chat com o Assistente do Bruno",
+    "coming_soon": "Em breve...",
+    "placeholder": "Digite sua mensagem...",
+    "start_message": "Olá! Sou o assistente do Bruno. Como posso ajudar você hoje?",
+    "buttons": {
+      "send": "Enviar",
+      "clear": "Limpar chat"
+    },
+    "status": {
+      "connecting": "Conectando...",
+      "offline": "Desconectado",
+      "online": "Online"
+    },
+    "errors": {
+      "connection": "Erro de conexão. Por favor, tente novamente.",
+      "message_failed": "Falha ao enviar mensagem"
+    }
   }
 }
+
+
+
+
+
+
+
 
 
 

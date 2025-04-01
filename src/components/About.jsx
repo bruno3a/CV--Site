@@ -94,7 +94,7 @@ const About = () => {
                   transition={{ duration: 0.6, delay: 0.6 }}
                   className="card h-full flex flex-col items-center justify-center text-center"
                 >
-                  <div className="text-2xl font-bold text-primary">8+</div>
+                  <div className="text-2xl font-bold text-primary">{t('about.stats.years_value')}</div>
                   <div className="text-sm text-gray-400">{t('about.stats.years')}</div>
                 </motion.div>
 
@@ -140,6 +140,7 @@ const About = () => {
 };
 
 export default About;
+
 
 
 
