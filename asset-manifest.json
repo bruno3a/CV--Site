@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "https://bruno3a.github.io/portfolio/static/css/main.949eeeae.css",
+    "main.js": "https://bruno3a.github.io/portfolio/static/js/main.9af0a6ba.js",
+    "index.html": "https://bruno3a.github.io/portfolio/index.html",
+    "main.949eeeae.css.map": "https://bruno3a.github.io/portfolio/static/css/main.949eeeae.css.map",
+    "main.9af0a6ba.js.map": "https://bruno3a.github.io/portfolio/static/js/main.9af0a6ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.949eeeae.css",
+    "static/js/main.9af0a6ba.js"
+  ]
+}
