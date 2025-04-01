@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { FaTelegram } from 'react-icons/fa';
+import { FaTelegram, FaFileDownload } from 'react-icons/fa';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
@@ -42,16 +42,30 @@ const Hero = () => {
           />
         </motion.div>
 
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          onClick={() => window.openChat()}
-          className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full flex items-center justify-center mx-auto gap-2 transition-colors"
-        >
-          <FaTelegram className="text-xl" />
-          {t('about.cta')}
-        </motion.button>
+        <div className="flex gap-4 mt-8 justify-center">
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+            onClick={() => window.openChat()}
+            className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full flex items-center justify-center gap-2 transition-colors"
+          >
+            <FaTelegram className="text-xl" />
+            {t('about.cta')}
+          </motion.button>
+
+          <motion.a
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2 }}
+            href={`${process.env.PUBLIC_URL}/files/cv.pdf`}
+            download
+            className="bg-background-light hover:bg-background-dark text-white px-8 py-3 rounded-full flex items-center justify-center gap-2 transition-colors border border-primary"
+          >
+            <FaFileDownload className="text-xl" />
+            {t('hero.download_cv')}
+          </motion.a>
+        </div>
       </div>
     </section>
   );

@@ -6,7 +6,8 @@
       "product_owner": "Product Owner",
       "ai_enthusiast": "AI Enthusiast",
       "data_follower": "Data Follower"
-    }
+    },
+    "download_cv": "Download CV"
   },
   "about": {
     "description": "With over 8 years of experience in business analysis and product management, I specialize in bridging the gap between business needs and technical solutions. My approach combines analytical thinking with strategic vision to deliver impactful results.",
@@ -31,4 +32,5 @@
     "coming_soon": "Coming soon..."
   }
 }
+
 

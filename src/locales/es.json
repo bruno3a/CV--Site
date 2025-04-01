@@ -6,7 +6,8 @@
       "product_owner": "Product Owner",
       "ai_enthusiast": "Entusiasta de IA",
       "data_follower": "Seguidor de Datos"
-    }
+    },
+    "download_cv": "Descargar CV"
   },
   "about": {
     "description": "Con más de 8 años de experiencia...",
@@ -31,5 +32,6 @@
     "coming_soon": "Próximamente..."
   }
 }
+
 
 
