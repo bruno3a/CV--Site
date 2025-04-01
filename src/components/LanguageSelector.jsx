@@ -6,25 +6,25 @@ const languages = [
   { 
     code: 'en', 
     name: 'English', 
-flag: 'flags/us.svg',
+    flag: `${process.env.PUBLIC_URL}/flags/us.svg`,
     available: true 
   },
   { 
     code: 'es', 
     name: 'Español', 
-flag: 'flags/es.svg',
+    flag: `${process.env.PUBLIC_URL}/flags/es.svg`,
     available: true 
   },
   { 
     code: 'pt', 
     name: 'Português', 
-flag: 'flags/br.svg',
+    flag: `${process.env.PUBLIC_URL}/flags/br.svg`,
     available: true 
   },
   { 
     code: 'ru', 
     name: 'Русский', 
-flag: 'flags/ru.svg',
+    flag: `${process.env.PUBLIC_URL}/flags/ru.svg`,
     available: true 
   },
 ];

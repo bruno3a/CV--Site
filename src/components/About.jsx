@@ -18,7 +18,7 @@ const About = () => {
           >
             <div className="aspect-square rounded-2xl overflow-hidden">
               <img
-                src="/profile-image.jpg"
+                src={`${process.env.PUBLIC_URL}/profile-image.jpg`}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
@@ -69,3 +69,4 @@ const About = () => {
 };
 
 export default About;
+
