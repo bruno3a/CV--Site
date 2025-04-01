@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
 import LanguageSelector from './components/LanguageSelector';
 import Navbar from './components/Navbar';
@@ -14,6 +14,11 @@ import ChatBot from './components/ChatBot';
 import SocialLinks from './components/SocialLinks';
 
 const App = () => {
+  useEffect(() => {
+    console.log('App mounted');
+    console.log('PUBLIC_URL:', process.env.PUBLIC_URL);
+  }, []);
+
   return (
     <LanguageProvider>
       <div className="bg-background min-h-screen text-white">
