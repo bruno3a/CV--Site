@@ -4,6 +4,50 @@ import { FaGithub, FaLinkedin, FaTelegram, FaWhatsapp } from 'react-icons/fa';
 
 const SocialLinks = () => {
   const [isShining, setIsShining] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Solo aplicar en dispositivos móviles
+      if (window.innerWidth <= 768) {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > lastScrollY) {
+          // Scrolling down
+          setIsVisible(false);
+        } else {
+          // Scrolling up
+          setIsVisible(true);
+        }
+        
+        setLastScrollY(currentScrollY);
+      } else {
+        // En desktop siempre visible
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Verificar el tamaño de la pantalla al montar
+    if (window.innerWidth > 768) {
+      setIsVisible(true);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsShining(true);
+      setTimeout(() => setIsShining(false), 1500);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const links = [
     {
@@ -28,17 +72,13 @@ const SocialLinks = () => {
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsShining(true);
-      setTimeout(() => setIsShining(false), 1500); // Duración total del efecto
-    }, 5000); // Intervalo entre cada barrido
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="fixed left-4 bottom-4 z-50">
+    <motion.div 
+      className="fixed left-4 bottom-4 z-50"
+      initial={{ opacity: 1 }}
+      animate={{ opacity: isVisible ? 1 : 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="flex flex-col gap-8">
         {links.map((link, index) => (
           <motion.a
@@ -62,11 +102,12 @@ const SocialLinks = () => {
           </motion.a>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default SocialLinks;
+
 
 
 

@@ -75,13 +75,13 @@ const Navbar = () => {
           animate={{ opacity: isMenuOpen ? 1 : 0, y: isMenuOpen ? 0 : -20 }}
           transition={{ duration: 0.2 }}
         >
-          <div className="py-4 space-y-4">
-            <NavLink href="#about">{t('nav.about')}</NavLink>
-            <NavLink href="#experience">{t('nav.experience')}</NavLink>
-            <NavLink href="#projects">{t('nav.projects')}</NavLink>
-            <NavLink href="#education">{t('nav.education')}</NavLink>
-            <NavLink href="#skills">{t('nav.skills')}</NavLink>
-            <NavLink href="#contact">{t('nav.contact')}</NavLink>
+          <div className="flex flex-col space-y-4 py-4 px-4 bg-background-dark/95 backdrop-blur-sm mt-4 rounded-lg">
+            <NavLink href="#about" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</NavLink>
+            <NavLink href="#experience" onClick={() => setIsMenuOpen(false)}>{t('nav.experience')}</NavLink>
+            <NavLink href="#projects" onClick={() => setIsMenuOpen(false)}>{t('nav.projects')}</NavLink>
+            <NavLink href="#education" onClick={() => setIsMenuOpen(false)}>{t('nav.education')}</NavLink>
+            <NavLink href="#skills" onClick={() => setIsMenuOpen(false)}>{t('nav.skills')}</NavLink>
+            <NavLink href="#contact" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</NavLink>
           </div>
         </motion.div>
       </div>
