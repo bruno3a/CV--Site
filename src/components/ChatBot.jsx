@@ -34,8 +34,7 @@ const ChatBot = () => {
   const [isChatAvailable, setIsChatAvailable] = useState(false); // Nuevo estado para rastrear si el chat está disponible
 
   const initializeBotpress = useCallback(async () => {
-    if (!window.botpressWebChat) {
-      console.log('Waiting for Botpress WebChat to be available...');
+    if (!window.botpressWebChat || isInitialized) {
       return;
     }
 
@@ -77,30 +76,20 @@ const ChatBot = () => {
           }
         `
       };
-
-      console.log('Initializing Botpress with config:', { 
-        ...config, 
-        clientId: clientId // Log el ID completo para debugging
-      });
       
-      await window.botpressWebChat.init(config);
+      if (!window.botpressWebChat.isInitialized) {
+        await window.botpressWebChat.init(config);
+        console.log('Botpress initialized successfully');
+      }
       
       setIsInitialized(true);
-      setHasError(false); // Resetear el error después de inicialización exitosa
-      setIsChatAvailable(true); // Marcar como disponible cuando se inicializa correctamente
-      console.log('Botpress initialization complete with clientId:', clientId);
-
-      // Show the widget after initialization
-      setTimeout(() => {
-        window.botpressWebChat.sendEvent({ type: 'show' });
-      }, 1000);
+      setHasError(false);
+      setIsChatAvailable(true);
 
     } catch (error) {
-      console.error('Error initializing Botpress:', error);
-      setHasError(true);
-      setIsChatAvailable(false);
+      console.log('Initialization attempt failed, but chat might still be working');
     }
-  }, [t, language, clientId]);
+  }, [t, language, clientId, isInitialized]);
 
   useEffect(() => {
     const loadScripts = async () => {
@@ -160,22 +149,31 @@ const ChatBot = () => {
 
   useEffect(() => {
     if (isBaseScriptLoaded && isCustomScriptLoaded && !isInitialized) {
+      // Solo intentar inicializar si window.botpressWebChat no está ya inicializado
+      if (window.botpressWebChat && window.botpressWebChat.isInitialized) {
+        console.log('Botpress already initialized, skipping...');
+        setIsInitialized(true);
+        return;
+      }
+
       let attempts = 0;
-      const maxAttempts = 10;
+      const maxAttempts = 3; // Reducir el número de intentos
       const interval = setInterval(() => {
         if (window.botpressWebChat) {
           clearInterval(interval);
-          initializeBotpress();
-          setHasError(false); // Resetear el error cuando el chat se inicializa
+          if (!isInitialized) {
+            initializeBotpress();
+          }
         } else if (attempts >= maxAttempts) {
           clearInterval(interval);
-          console.error('Failed to initialize Botpress after maximum attempts');
-          setHasError(true);
+          console.log('Botpress initialization skipped - widget might be already running');
         }
         attempts++;
       }, 1000);
 
-      return () => clearInterval(interval);
+      return () => {
+        clearInterval(interval);
+      };
     }
   }, [isBaseScriptLoaded, isCustomScriptLoaded, isInitialized, initializeBotpress]);
 
