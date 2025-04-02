@@ -10,8 +10,8 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import WorldMap from './components/WorldMap';
 import Education from './components/Education';
-import ChatBot from './components/ChatBot';
 import SocialLinks from './components/SocialLinks';
+import ChatBot from './components/ChatBot';
 
 const App = () => {
   useEffect(() => {
@@ -37,8 +37,8 @@ const App = () => {
           <Contact />
         </main>
         
-        <ChatBot />
         <SocialLinks />
+        <ChatBot />
       </div>
     </LanguageProvider>
   );

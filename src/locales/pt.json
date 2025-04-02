@@ -7,9 +7,11 @@
       "ai_enthusiast": "Entusiasta de IA",
       "data_follower": "Seguidor de Dados"
     },
-    "download_cv": "Baixar CV"
+    "download_cv": "Baixar CV",
+    "lets_talk": "Vamos conversar"
   },
   "about": {
+    "vamos_conversar": "Vamos Conversar",
     "description": "Com mais de 8 anos de experiência em análise de negócios e gestão de produtos, sou especializado em fazer a ponte entre necessidades comerciais e soluções técnicas. Minha abordagem combina pensamento analítico com visão estratégica para entregar resultados impactantes.",
     "extended_description": "Como Product Owner, fico feliz em saber que minhas decisões melhoram a vida das pessoas. Com minha perspectiva centrada em dados, gosto de discutir definições de produto e experiência do usuário. Amo tecnologia e tenho orgulho de que seja parte da minha profissão. Sou empático, responsável, aprendo rápido e busco desafios com grande impacto que me permitam manter uma descoberta contínua, dando-me a oportunidade de me destacar e ser reconhecido",
     "stats": {
@@ -22,7 +24,8 @@
       "clients": "Clientes Satisfeitos",
       "areas": "Áreas de Negócio"
     },
-    "cta": "Vamos Conversar"
+    "cta": "Vamos Conversar",
+    "contact_me": "Entre em contato"
   },
   "nav": {
     "about": "Sobre",
@@ -224,6 +227,7 @@
     }
   },
   "chat": {
+    "let_me_help_you": "Deixe-me ajudar!",
     "title": "Chat com o Assistente do Bruno",
     "coming_soon": "Em breve...",
     "placeholder": "Digite sua mensagem...",
@@ -243,14 +247,5 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
 
 

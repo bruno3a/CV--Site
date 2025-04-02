@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
-import { FaFileDownload, FaTelegram } from 'react-icons/fa';
+import { FaFileDownload, FaEnvelope } from 'react-icons/fa';
 
 const About = () => {
   const { t } = useLanguage();
@@ -53,8 +53,8 @@ const About = () => {
                   href="#contact" 
                   className="button-primary text-center inline-flex items-center justify-center gap-2"
                 >
-                  <FaTelegram className="text-xl" />
-                  {t('about.cta')}
+                  <FaEnvelope className="text-xl" />
+                  {t('about.contact_me')}
                 </a>
                 
                 <button
@@ -140,6 +140,8 @@ const About = () => {
 };
 
 export default About;
+
+
 
 
 

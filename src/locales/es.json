@@ -7,7 +7,8 @@
       "ai_enthusiast": "Entusiasta de IA",
       "data_follower": "Seguidor de Datos"
     },
-    "download_cv": "Descargar CV"
+    "download_cv": "Descargar CV",
+    "lets_talk": "Hablemos"
   },
   "about": {
     "description": "Con más de 8 años de experiencia en análisis de negocios y gestión de productos, me especializo en cerrar la brecha entre las necesidades comerciales y las soluciones técnicas. Mi enfoque combina el pensamiento analítico con la visión estratégica para entregar resultados impactantes.",
@@ -22,7 +23,8 @@
       "clients": "Clientes Satisfechos",
       "areas": "Áreas de Negocio"
     },
-    "cta": "Hablemos"
+    "cta": "Hablemos",
+    "contact_me": "Contáctame"
   },
   "nav": {
     "about": "Sobre Mí",
@@ -33,6 +35,7 @@
     "contact": "Contacto"
   },
   "chat": {
+    "let_me_help_you": "¡Déjame ayudarte!",
     "title": "Chat con el Asistente de Bruno",
     "coming_soon": "Próximamente...",
     "placeholder": "Escribe tu mensaje...",
@@ -164,6 +167,7 @@
     }
   },
   "languages": {
+    "deja_me_ayudar": "¡Déjame ayudarte!",
     "spanish": "Español",
     "english": "Inglés",
     "portuguese": "Portugués",
@@ -243,7 +247,3 @@
     }
   }
 }
-
-
-
-

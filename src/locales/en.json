@@ -7,7 +7,9 @@
       "ai_enthusiast": "AI Enthusiast",
       "data_follower": "Data Follower"
     },
-    "download_cv": "Download CV"
+    "download_cv": "Download CV",
+    "lets_talk": "Let's talk",
+    "chat_button": "Let me help you!"
   },
   "about": {
     "description": "With over 8 years of experience in business analysis and product management, I specialize in bridging the gap between business needs and technical solutions. My approach combines analytical thinking with strategic vision to deliver impactful results.",
@@ -22,7 +24,8 @@
       "clients": "Happy Clients",
       "areas": "Business Areas"
     },
-    "cta": "Let's Talk"
+    "cta": "Let's Talk",
+    "contact_me": "Contact me"
   },
   "nav": {
     "about": "About",
@@ -198,6 +201,7 @@
     }
   },
   "chat": {
+    "let_me_help_you": "Let me help you!",
     "title": "Chat with Bruno's Assistant",
     "coming_soon": "Coming soon...",
     "placeholder": "Type your message...",
@@ -247,19 +251,10 @@
     }
   },
   "languages": {
+    "let_me_help_you": "Let me help you!",
     "spanish": "Spanish",
     "english": "English",
     "portuguese": "Portuguese",
     "russian": "Russian"
   }
 }
-
-
-
-
-
-
-
-
-
-

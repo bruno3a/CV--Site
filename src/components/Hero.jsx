@@ -6,10 +6,16 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
   const { t } = useLanguage();
-  
+
+  const handleChatOpen = () => {
+    if (window.botpressWebChat && window.botpressReady) {
+      window.botpressWebChat.sendEvent({ type: 'show' });
+    }
+  };
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative">
-      <div className="container mx-auto px-4 text-center">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative">
+      <div className="text-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,13 +33,13 @@ const Hero = () => {
         >
           <TypeAnimation
             sequence={[
-              t('hero.roles.business_analyst'),
+              'Business Analyst',
               2000,
-              t('hero.roles.product_owner'),
+              'Product Owner',
               2000,
-              t('hero.roles.ai_enthusiast'),
+              'AI Enthusiast',
               2000,
-              t('hero.roles.data_follower'),
+              'Data Follower',
               2000,
             ]}
             wrapper="span"
@@ -47,11 +53,11 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
-            onClick={() => window.openChat()}
+            onClick={handleChatOpen}
             className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full flex items-center justify-center gap-2 transition-colors"
           >
             <FaTelegram className="text-xl" />
-            {t('about.cta')}
+            {t('hero.lets_talk')}
           </motion.button>
 
           <motion.a
