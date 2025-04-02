@@ -35,6 +35,7 @@
     "contact": "Contacto"
   },
   "chat": {
+    "get_instant_help": "Obtener ayuda instantánea",
     "let_me_help_you": "¡Déjame ayudarte!",
     "title": "Chat con el Asistente de Bruno",
     "coming_soon": "Próximamente...",

@@ -46,6 +46,7 @@ const ChatBot = () => {
         clientId: clientId, // Usa el ID generado
         composerPlaceholder: t('chat.placeholder'),
         botConversationDescription: t('chat.start_message'),
+        botName: "Bruno's AI Assistant bot",
         lazySocket: false,
         frontendVersion: '2.2',
         showPoweredBy: false,
@@ -73,6 +74,17 @@ const ChatBot = () => {
             --bp-color: white;
             --bp-primary-color: #3B82F6;
             --bp-primary-dark: #1E40AF;
+          }
+
+          .bpHeaderContentTitle,
+          .bpw-header-container .bpHeaderContentTitle {
+            content: "Bruno's AI Assistant bot" !important;
+            display: block !important;
+          }
+
+          .bpMessageListMarqueeTitle {
+            content: "Bruno's AI Assistant bot" !important;
+            display: block !important;
           }
         `
       };
@@ -176,6 +188,30 @@ const ChatBot = () => {
       };
     }
   }, [isBaseScriptLoaded, isCustomScriptLoaded, isInitialized, initializeBotpress]);
+
+  useEffect(() => {
+    if (isInitialized) {
+      const updateTitles = () => {
+        // Para el título del header
+        const headerTitle = document.querySelector('.bpHeaderContentTitle');
+        if (headerTitle) {
+          headerTitle.textContent = "Bruno's AI Assistant bot";
+        }
+
+        // Para el título del marquee
+        const marqueeTitle = document.querySelector('.bpMessageListMarqueeTitle');
+        if (marqueeTitle) {
+          marqueeTitle.textContent = "Bruno's AI Assistant bot";
+        }
+      };
+
+      // Intenta actualizar inmediatamente
+      updateTitles();
+
+      // Y también después de un pequeño retraso para asegurar que el DOM está listo
+      setTimeout(updateTitles, 1000);
+    }
+  }, [isInitialized]);
 
   return (
     <>

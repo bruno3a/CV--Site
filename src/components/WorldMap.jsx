@@ -55,7 +55,7 @@ const WorldMap = () => {
     },
     {
       country: "United States",
-      projects: 20,
+      projects: 5, // Actualizado de 20 a 5
       description: "RAG Implementation on chatbot | Stakeholder Management",
       flagUrl: "https://flagcdn.com/us.svg"
     },
@@ -131,6 +131,7 @@ const WorldMap = () => {
 };
 
 export default WorldMap;
+
 
 
 

@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const NavLink = ({ href, children }) => (
+const NavLink = ({ href, children, onClick }) => (
   <a 
     href={href}
     className="text-gray-300 hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark"
     aria-label={children}
     tabIndex={0}
+    onClick={onClick}
   >
     {children}
   </a>
@@ -17,6 +18,10 @@ const Navbar = () => {
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,12 +88,12 @@ const Navbar = () => {
           transition={{ duration: 0.2 }}
         >
           <div className="flex flex-col space-y-4 py-4 px-4 bg-background-dark/95 backdrop-blur-sm mt-4 rounded-lg">
-            <NavLink href="#about" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</NavLink>
-            <NavLink href="#experience" onClick={() => setIsMenuOpen(false)}>{t('nav.experience')}</NavLink>
-            <NavLink href="#projects" onClick={() => setIsMenuOpen(false)}>{t('nav.projects')}</NavLink>
-            <NavLink href="#education" onClick={() => setIsMenuOpen(false)}>{t('nav.education')}</NavLink>
-            <NavLink href="#skills" onClick={() => setIsMenuOpen(false)}>{t('nav.skills')}</NavLink>
-            <NavLink href="#contact" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</NavLink>
+            <NavLink href="#about" onClick={handleLinkClick}>{t('nav.about')}</NavLink>
+            <NavLink href="#experience" onClick={handleLinkClick}>{t('nav.experience')}</NavLink>
+            <NavLink href="#projects" onClick={handleLinkClick}>{t('nav.projects')}</NavLink>
+            <NavLink href="#education" onClick={handleLinkClick}>{t('nav.education')}</NavLink>
+            <NavLink href="#skills" onClick={handleLinkClick}>{t('nav.skills')}</NavLink>
+            <NavLink href="#contact" onClick={handleLinkClick}>{t('nav.contact')}</NavLink>
           </div>
         </motion.div>
       </nav>

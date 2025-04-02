@@ -218,7 +218,8 @@
     "errors": {
       "connection": "Connection error. Please try again.",
       "message_failed": "Failed to send message"
-    }
+    },
+    "get_instant_help": "Get instant help"
   },
   "sections": {
     "projects": {

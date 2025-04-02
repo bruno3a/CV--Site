@@ -78,11 +78,13 @@
 .social-icon-link {
   overflow: hidden;
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .shine-effect-vertical {
   opacity: 0;
   transform: translateY(-100%);
+  transition: all 0.3s ease;
 }
 
 .shine-active .shine-effect-vertical {
@@ -109,19 +111,12 @@
   text-shadow: 0 0 10px currentColor;
 }
 
-/* Asegurarse que la transición sea suave */
-.social-icon-link, 
-.shine-effect-vertical {
-  transition: all 0.3s ease;
-}
-
 /* Ajustes para menú móvil */
 @media (max-width: 768px) {
   .social-icon-link {
     transition: opacity 0.3s ease-in-out;
   }
   
-  /* Asegurar que el menú móvil no se desborde */
   .mobile-menu {
     max-height: calc(100vh - 80px);
     overflow-y: auto;
@@ -136,20 +131,64 @@
   right: 24px !important;
 }
 
-/* Tooltip animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+/* Chat pointer animation */
+.chat-pointer {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.chat-pointer-circle {
+  position: absolute;
+  width: 56px; /* Mismo tamaño que el botón de chat */
+  height: 56px;
+  border: 3px solid #3B82F6;
+  border-radius: 50%;
+  transform-origin: center;
+  animation: moveCircle 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+}
+
+@keyframes moveCircle {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(calc(var(--pointer-move-x) - 50%), calc(var(--pointer-move-y) - 50%)) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--pointer-move-x) - 50%), calc(var(--pointer-move-y) - 50%)) scale(1.2);
+  }
+}
+
+/* Añadir un efecto de brillo al botón cuando se hace clic */
+.chat-button-highlight {
+  animation: buttonPulse 0.5s ease-out;
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
   }
   50% {
-    transform: translateY(-10px);
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
   }
 }
 
-.animate-bounce {
-  animation: float 3s ease-in-out infinite;
-}
-
+/* Botpress styles */
 .bpw-widget-btn {
   background-color: var(--bp-primary-color) !important;
   border-radius: 28px !important;
@@ -182,112 +221,63 @@
   color: white !important;
 }
 
-.bpw-composer {
-  background-color: var(--bp-bg-color) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-/* Estilos para los mensajes */
-.bp-message {
-  background-color: var(--bp-primary-color) !important;
-  color: var(--bp-color) !important;
-}
-
-/* Estilos para el input */
+.bpw-composer,
 .bp-widget-composer {
   background-color: var(--bp-bg-color) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Ajustes para menú móvil */
-@media (max-width: 768px) {
-  .social-icon-link {
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  /* Asegurar que el menú móvil no se desborde */
-  .mobile-menu {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
+.bp-message {
+  background-color: var(--bp-primary-color) !important;
+  color: var(--bp-color) !important;
 }
 
-/* Ajustes para menú móvil */
-@media (max-width: 768px) {
-  .social-icon-link {
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  /* Asegurar que el menú móvil no se desborde */
-  .mobile-menu {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
+.bpHeaderContentTitle,
+.bpw-header-container .bpHeaderContentTitle {
+  content: "Bruno's AI Assistant bot" !important;
+  display: block !important;
 }
 
-/* Ajustes para menú móvil */
-@media (max-width: 768px) {
-  .social-icon-link {
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  /* Asegurar que el menú móvil no se desborde */
-  .mobile-menu {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
+.bpMessageListMarqueeTitle {
+  content: "Bruno's AI Assistant bot" !important;
+  display: block !important;
 }
 
-/* Ajustes para menú móvil */
-@media (max-width: 768px) {
-  .social-icon-link {
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  /* Asegurar que el menú móvil no se desborde */
-  .mobile-menu {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
+/* Asegúrate de que los estilos se apliquen incluso después de la carga dinámica */
+#bp-web-widget-container {
+  z-index: 9999 !important;
 }
 
-/* Ajustes para menú móvil */
-@media (max-width: 768px) {
-  .social-icon-link {
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  /* Asegurar que el menú móvil no se desborde */
-  .mobile-menu {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
+#bp-web-widget-container .bpHeaderContentTitle,
+#bp-web-widget-container .bpMessageListMarqueeTitle {
+  content: "Bruno's AI Assistant bot" !important;
+  display: block !important;
 }
 
-/* Ajustes para menú móvil */
-@media (max-width: 768px) {
-  .social-icon-link {
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  /* Asegurar que el menú móvil no se desborde */
-  .mobile-menu {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
+/* Spotlight effect */
+.spotlight-effect {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  animation: spotlight 2s ease-in-out forwards;
 }
 
-/* Ajustes para menú móvil */
-@media (max-width: 768px) {
-  .social-icon-link {
-    transition: opacity 0.3s ease-in-out;
+@keyframes spotlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    transform: scale(1);
   }
-  
-  /* Asegurar que el menú móvil no se desborde */
-  .mobile-menu {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
+  50% {
+    box-shadow: 0 0 50px 20px rgba(59, 130, 246, 0.3);
+    transform: scale(1.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    transform: scale(1);
   }
 }
-
-
