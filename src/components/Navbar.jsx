@@ -5,7 +5,9 @@ import { useLanguage } from '../contexts/LanguageContext';
 const NavLink = ({ href, children }) => (
   <a 
     href={href}
-    className="text-gray-300 hover:text-primary transition-colors duration-300"
+    className="text-gray-300 hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark"
+    aria-label={children}
+    tabIndex={0}
   >
     {children}
   </a>
@@ -26,7 +28,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <motion.nav
+    <motion.header
+      role="banner"
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-background-dark/95 backdrop-blur-sm py-4' : 'bg-transparent py-6'
       }`}
@@ -34,9 +37,11 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4">
+      <nav role="navigation" aria-label="Main navigation" className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold text-primary">CV - Bruno Trezza</a>
+          <a href="#" className="text-2xl font-bold text-primary" aria-label="Home">
+            CV - Bruno Trezza
+          </a>
           
           {/* Desktop Menu - Added mr-20 to create space on the right */}
           <div className="hidden md:flex space-x-8 mr-20">
@@ -50,8 +55,10 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-300"
+            className="md:hidden text-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
           >
             <svg 
               className="w-6 h-6" 
@@ -84,8 +91,8 @@ const Navbar = () => {
             <NavLink href="#contact" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</NavLink>
           </div>
         </motion.div>
-      </div>
-    </motion.nav>
+      </nav>
+    </motion.header>
   );
 };
 
