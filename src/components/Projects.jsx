@@ -34,7 +34,7 @@ const Projects = () => {
     {
       title: t('projects.items.portfolio.title'),
       description: t('projects.items.portfolio.description'),
-      image: `${process.env.PUBLIC_URL}/projects/portfolio-site.jpg`,
+      image: `${process.env.PUBLIC_URL}/projects/personal-site.jpg`,
       tags: ["React", "Tailwind CSS", "Frontend", "UI/UX", "Personal Branding"],
     },
     {

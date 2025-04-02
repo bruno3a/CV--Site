@@ -7,26 +7,11 @@ import { useLanguage } from '../contexts/LanguageContext';
 const Hero = () => {
   const { t } = useLanguage();
 
-  const handleChatOpen = () => {
-    if (window.botpressWebChat) {
-      try {
-        // Primero aseguramos que el widget esté visible
-        window.botpressWebChat.sendEvent({ 
-          type: 'toggle'
-        });
-        
-        // Esperamos un momento y enfocamos el input
-        setTimeout(() => {
-          const chatInput = document.querySelector('.bpw-composer textarea');
-          if (chatInput) {
-            chatInput.focus();
-          }
-        }, 500);
-      } catch (error) {
-        console.error('Error opening chat:', error);
-      }
-    } else {
-      console.warn('Botpress WebChat not initialized yet');
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    const contactSection = document.querySelector('#contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -70,7 +55,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
-            onClick={handleChatOpen}
+            onClick={handleContactClick}
             className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full flex items-center justify-center gap-2 transition-colors"
           >
             <FaTelegram className="text-xl" />

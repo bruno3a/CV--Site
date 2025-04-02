@@ -125,8 +125,8 @@
         "tags": ["Gestión de APIs", "Documentación", "Gobierno", "Azure", "Experiencia de Desarrollador"]
       },
       "portfolio": {
-        "title": "Sitio Web de Portfolio Personal",
-        "description": "Diseñé y desarrollé este sitio web sobre mi CV personal usando React y Tailwind CSS, con soporte multi-idioma y componentes interactivos mediante el uso de prompting avanzado y tecnología reciente",
+        "title": "Sitio Web Personal",
+        "description": "Diseñé y desarrollé este sitio web personal usando React y Tailwind CSS, con soporte multi-idioma y componentes interactivos mediante el uso de prompting avanzado y tecnología reciente",
         "tags": ["React", "Tailwind CSS", "Frontend", "UI/UX", "Marca Personal"]
       },
       "ecommerce": {

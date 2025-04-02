@@ -106,8 +106,8 @@
         "tags": ["API Management", "Documentation", "Governance", "Azure", "Developer Experience"]
       },
       "portfolio": {
-        "title": "Personal Portfolio Website",
-        "description": "Designed and developed this personal CV website using React and Tailwind CSS, with multi-language support and interactive components through advanced prompting and recent technology",
+        "title": "Personal Website",
+        "description": "Designed and developed this personal website using React and Tailwind CSS, with multi-language support and interactive components through advanced prompting and recent technology",
         "tags": ["React", "Tailwind CSS", "Frontend", "UI/UX", "Personal Branding"]
       },
       "ecommerce": {
