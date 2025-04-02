@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { IoLanguage } from 'react-icons/io5';
+import { FaVolumeUp, FaStop } from 'react-icons/fa';
 import { useLanguage } from '../contexts/LanguageContext';
+import Tooltip from './Tooltip';
+import { useState, useRef } from 'react';
 
 const Education = () => {
   const { t } = useLanguage();
@@ -37,30 +40,76 @@ const Education = () => {
     }
   ];
 
+  const [playingAudio, setPlayingAudio] = useState(null);
+  const audioRefs = useRef({});
+
+  const playAudio = (langCode, audioSrc) => {
+    // Si hay un audio reproduciéndose, lo detenemos
+    if (playingAudio) {
+      audioRefs.current[playingAudio].pause();
+      audioRefs.current[playingAudio].currentTime = 0;
+      
+      // Si el usuario hace clic en el mismo audio que se está reproduciendo, solo lo detenemos
+      if (playingAudio === langCode) {
+        setPlayingAudio(null);
+        return;
+      }
+    }
+
+    // Si no existe el audio ref para este idioma, lo creamos
+    if (!audioRefs.current[langCode]) {
+      audioRefs.current[langCode] = new Audio(audioSrc);
+      
+      // Agregamos el evento para cuando termine el audio
+      audioRefs.current[langCode].addEventListener('ended', () => {
+        setPlayingAudio(null);
+      });
+    }
+
+    // Reproducimos el nuevo audio
+    audioRefs.current[langCode].play();
+    setPlayingAudio(langCode);
+  };
+
+  const stopAudio = (langCode) => {
+    if (audioRefs.current[langCode]) {
+      audioRefs.current[langCode].pause();
+      audioRefs.current[langCode].currentTime = 0;
+      setPlayingAudio(null);
+    }
+  };
+
   const languages = [
     { 
+      code: 'es',
       name: t('languages.spanish'), 
       level: t('sections.education.levels.native'), 
       flag: `${process.env.PUBLIC_URL}/flags/es.svg`,
-      progress: 100 
+      progress: 100,
+      audio: `${process.env.PUBLIC_URL}/audio/spanish-pronunciation.mp3`
     },
     { 
+      code: 'en',
       name: t('languages.english'), 
       level: t('sections.education.levels.advanced'), 
       flag: `${process.env.PUBLIC_URL}/flags/us.svg`,
-      progress: 90 
+      progress: 90,
+      audio: `${process.env.PUBLIC_URL}/audio/english-pronunciation.mp3`
     },
     { 
+      code: 'pt',
       name: t('languages.portuguese'), 
       level: t('sections.education.levels.advanced'), 
       flag: `${process.env.PUBLIC_URL}/flags/br.svg`,
-      progress: 85 
+      progress: 85,
+      audio: `${process.env.PUBLIC_URL}/audio/portuguese-pronunciation.mp3`
     },
     { 
       name: t('languages.russian'), 
       level: t('sections.education.levels.basic'), 
       flag: `${process.env.PUBLIC_URL}/flags/ru.svg`,
-      progress: 30 
+      progress: 30,
+      audio: `${process.env.PUBLIC_URL}/audio/russian-pronunciation.mp3`
     }
   ];
 
@@ -229,7 +278,7 @@ const Education = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {languages.map((lang, index) => (
               <motion.div
-                key={index}
+                key={lang.code}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -242,9 +291,32 @@ const Education = () => {
                     alt={`${lang.name} flag`} 
                     className="w-8 h-8 rounded-full object-cover"
                   />
-                  <div>
+                  <div className="flex-grow">
                     <h4 className="font-medium text-gray-300">{lang.name}</h4>
                     <span className="text-sm text-primary">{lang.level}</span>
+                  </div>
+                  <div className="relative group">
+                    <button
+                      onClick={() => playingAudio === lang.code 
+                        ? stopAudio(lang.code)
+                        : playAudio(lang.code, lang.audio)
+                      }
+                      className="text-gray-400 hover:text-primary transition-colors p-2 
+                               rounded-full hover:bg-background/30 relative"
+                      aria-label={`${playingAudio === lang.code ? 'Stop' : 'Listen'} ${lang.name} pronunciation`}
+                    >
+                      {playingAudio === lang.code ? (
+                        <FaStop className="w-5 h-5" />
+                      ) : (
+                        <FaVolumeUp className="w-5 h-5" />
+                      )}
+                    </button>
+                    <Tooltip 
+                      content={playingAudio === lang.code 
+                        ? "Stop pronunciation" 
+                        : "Listen my pronunciation!"
+                      } 
+                    />
                   </div>
                 </div>
                 <div className="h-1.5 bg-background rounded-full overflow-hidden">
