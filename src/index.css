@@ -130,24 +130,61 @@
 
 /* Botpress Web Chat customization */
 #bp-web-widget-container {
-  background-color: var(--bp-bg-color) !important;
-  height: 100% !important;
+  z-index: 9999 !important;
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
 }
 
-#bp-web-widget-container iframe {
-  border: none !important;
-  height: 100% !important;
+/* Tooltip animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: float 3s ease-in-out infinite;
+}
+
+.bpw-widget-btn {
+  background-color: var(--bp-primary-color) !important;
+  border-radius: 28px !important;
+  padding: 0 20px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.bpw-layout {
   width: 100% !important;
-  background-color: var(--bp-bg-color) !important;
-}
-
-.bp-widget-web {
+  height: 100% !important;
   border-radius: 0 !important;
-  box-shadow: none !important;
 }
 
-.bp-widget-widget {
+.bpw-header-container {
+  background-color: var(--bp-primary-color) !important;
+}
+
+.bpw-chat-container {
   background-color: var(--bp-bg-color) !important;
+}
+
+.bpw-from-bot .bpw-chat-bubble {
+  background-color: var(--bp-primary-color) !important;
+  color: white !important;
+}
+
+.bpw-from-user .bpw-chat-bubble {
+  background-color: var(--bp-primary-dark) !important;
+  color: white !important;
+}
+
+.bpw-composer {
+  background-color: var(--bp-bg-color) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Estilos para los mensajes */

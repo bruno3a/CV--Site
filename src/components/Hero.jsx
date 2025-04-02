@@ -8,8 +8,25 @@ const Hero = () => {
   const { t } = useLanguage();
 
   const handleChatOpen = () => {
-    if (window.botpressWebChat && window.botpressReady) {
-      window.botpressWebChat.sendEvent({ type: 'show' });
+    if (window.botpressWebChat) {
+      try {
+        // Primero aseguramos que el widget esté visible
+        window.botpressWebChat.sendEvent({ 
+          type: 'toggle'
+        });
+        
+        // Esperamos un momento y enfocamos el input
+        setTimeout(() => {
+          const chatInput = document.querySelector('.bpw-composer textarea');
+          if (chatInput) {
+            chatInput.focus();
+          }
+        }, 500);
+      } catch (error) {
+        console.error('Error opening chat:', error);
+      }
+    } else {
+      console.warn('Botpress WebChat not initialized yet');
     }
   };
 
