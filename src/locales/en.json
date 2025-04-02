@@ -1,4 +1,8 @@
 {
+  "audio": {
+    "listen_pronunciation": "Listen my pronunciation!",
+    "stop_pronunciation": "Stop pronunciation"
+  },
   "hero": {
     "title": "Bruno Trezza",
     "roles": {

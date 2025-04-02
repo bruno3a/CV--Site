@@ -281,3 +281,23 @@
     transform: scale(1);
   }
 }
+
+/* Estilos para el tooltip */
+.tooltip-container {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background-color: #111827; /* bg-gray-900 */
+}

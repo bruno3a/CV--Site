@@ -3,7 +3,7 @@ import { IoLanguage } from 'react-icons/io5';
 import { FaVolumeUp, FaStop } from 'react-icons/fa';
 import { useLanguage } from '../contexts/LanguageContext';
 import Tooltip from './Tooltip';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const Education = () => {
   const { t } = useLanguage();
@@ -41,7 +41,32 @@ const Education = () => {
   ];
 
   const [playingAudio, setPlayingAudio] = useState(null);
+  const [showTooltips, setShowTooltips] = useState(false);
   const audioRefs = useRef({});
+  const tooltipTimeoutRef = useRef(null);
+
+  const handleSectionHover = () => {
+    setShowTooltips(true);
+    
+    // Limpiar el timeout anterior si existe
+    if (tooltipTimeoutRef.current) {
+      clearTimeout(tooltipTimeoutRef.current);
+    }
+
+    // Aumentar el timeout a 3 segundos
+    tooltipTimeoutRef.current = setTimeout(() => {
+      setShowTooltips(false);
+    }, 3000);
+  };
+
+  // Limpiar el timeout cuando el componente se desmonte
+  useEffect(() => {
+    return () => {
+      if (tooltipTimeoutRef.current) {
+        clearTimeout(tooltipTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const playAudio = (langCode, audioSrc) => {
     // Si hay un audio reproduciéndose, lo detenemos
@@ -79,6 +104,26 @@ const Education = () => {
     }
   };
 
+  // Traducciones fijas para cada idioma
+  const fixedTranslations = {
+    es: {
+      listen: "¡Escucha mi pronunciación!",
+      stop: "Detener pronunciación"
+    },
+    en: {
+      listen: "Listen to my pronunciation!",
+      stop: "Stop pronunciation"
+    },
+    pt: {
+      listen: "Ouça minha pronúncia!",
+      stop: "Parar pronúncia"
+    },
+    ru: {
+      listen: "Послушайте моё произношение!",
+      stop: "Остановить произношение"
+    }
+  };
+
   const languages = [
     { 
       code: 'es',
@@ -105,6 +150,7 @@ const Education = () => {
       audio: `${process.env.PUBLIC_URL}/audio/portuguese-pronunciation.mp3`
     },
     { 
+      code: 'ru',
       name: t('languages.russian'), 
       level: t('sections.education.levels.basic'), 
       flag: `${process.env.PUBLIC_URL}/flags/ru.svg`,
@@ -191,10 +237,11 @@ const Education = () => {
         onClick={handleClick}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6 }}
         className="card hover:border-primary/50 transition-all duration-300 flex items-start gap-4 group min-h-[90px]"
         whileHover={{ scale: 1.02 }}
+        style={{ opacity: 1 }} // Forzar opacidad 1 para mantener visible
       >
         <div className="text-primary group-hover:text-primary-light transition-colors pt-1">
           <img 
@@ -211,12 +258,37 @@ const Education = () => {
     );
   };
 
+  // Separar el tooltip en su propio componente
+  const LanguageTooltip = ({ isVisible, lang, index }) => (
+    <motion.div
+      initial={false}
+      animate={{ 
+        opacity: isVisible ? 1 : 0,
+        y: isVisible ? 0 : 10
+      }}
+      transition={{ 
+        duration: 0.2,
+        delay: index * 0.1
+      }}
+      className="absolute right-2 -top-8 z-50 pointer-events-none"
+    >
+      <div className="relative bg-gray-900 text-white px-3 py-2 rounded text-sm whitespace-nowrap">
+        {fixedTranslations[lang.code]?.listen || fixedTranslations['en'].listen}
+        <div 
+          className="absolute h-3 w-3 bg-gray-900 
+                     bottom-0 right-[18px] translate-y-1/2 
+                     transform rotate-45"
+        />
+      </div>
+    </motion.div>
+  );
+
   return (
     <section id="education" className="section-container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
         <h2 className="section-title">{t('sections.education.title')}</h2>
@@ -269,22 +341,46 @@ const Education = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="card"
+          onMouseEnter={handleSectionHover}
         >
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex items-center gap-2 mb-8"> {/* Aumentado el margin-bottom de 6 a 8 */}
             <IoLanguage className="text-2xl text-primary" />
             <h3 className="text-xl font-bold">{t('sections.education.languages')}</h3>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4"> {/* Agregado padding-top */}
             {languages.map((lang, index) => (
               <motion.div
                 key={lang.code}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="bg-background-light rounded-lg p-4 hover:bg-background-dark transition-colors"
+                className="bg-background-light rounded-lg p-4 hover:bg-background-dark transition-colors relative"
               >
+                {/* Tooltip reposicionado */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ 
+                    opacity: showTooltips ? 1 : 0,
+                    y: showTooltips ? 0 : 10
+                  }}
+                  transition={{ 
+                    duration: 0.2,
+                    delay: index * 0.1
+                  }}
+                  className="absolute right-2 -top-8 z-50" /* Cambiado de -top-10 a -top-8 */
+                >
+                  <div className="relative bg-gray-900 text-white px-3 py-2 rounded text-sm whitespace-nowrap">
+                    {fixedTranslations[lang.code]?.listen || fixedTranslations['en'].listen}
+                    <div 
+                      className="absolute h-3 w-3 bg-gray-900 
+                                 bottom-0 right-[18px] translate-y-1/2 
+                                 transform rotate-45"
+                    />
+                  </div>
+                </motion.div>
+
                 <div className="flex items-center gap-3 mb-3">
                   <img 
                     src={lang.flag} 
@@ -295,15 +391,18 @@ const Education = () => {
                     <h4 className="font-medium text-gray-300">{lang.name}</h4>
                     <span className="text-sm text-primary">{lang.level}</span>
                   </div>
-                  <div className="relative group">
+                  <div className="relative">
                     <button
                       onClick={() => playingAudio === lang.code 
                         ? stopAudio(lang.code)
                         : playAudio(lang.code, lang.audio)
                       }
                       className="text-gray-400 hover:text-primary transition-colors p-2 
-                               rounded-full hover:bg-background/30 relative"
-                      aria-label={`${playingAudio === lang.code ? 'Stop' : 'Listen'} ${lang.name} pronunciation`}
+                               rounded-full hover:bg-background/30"
+                      aria-label={playingAudio === lang.code 
+                        ? fixedTranslations[lang.code]?.stop || fixedTranslations['en'].stop
+                        : fixedTranslations[lang.code]?.listen || fixedTranslations['en'].listen
+                      }
                     >
                       {playingAudio === lang.code ? (
                         <FaStop className="w-5 h-5" />
@@ -311,19 +410,15 @@ const Education = () => {
                         <FaVolumeUp className="w-5 h-5" />
                       )}
                     </button>
-                    <Tooltip 
-                      content={playingAudio === lang.code 
-                        ? "Stop pronunciation" 
-                        : "Listen my pronunciation!"
-                      } 
-                    />
                   </div>
                 </div>
+
+                {/* Barra de progreso */}
                 <div className="h-1.5 bg-background rounded-full overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${lang.progress}%` }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 1, delay: index * 0.2 }}
                     className="h-full bg-primary rounded-full"
                   />
@@ -336,9 +431,15 @@ const Education = () => {
         {/* Certificates Section */}
         <div className="mt-8">
           <h3 className="text-xl font-semibold mb-4">{t('education.certificates.title')}</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div 
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"
+            style={{ minHeight: certificates.length > 0 ? 'auto' : '0' }}
+          >
             {certificates.map((cert, index) => (
-              <CertificateBadge key={index} certificate={cert} />
+              <CertificateBadge 
+                key={cert.key || index} 
+                certificate={cert} 
+              />
             ))}
           </div>
         </div>
