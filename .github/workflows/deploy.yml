@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,15 +33,14 @@ jobs:
           PUBLIC_URL: /CV--Site
         run: npm run build
 
-      - name: Copy 404 file
-        run: cp build/index.html build/404.html
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
           branch: gh-pages
           clean: true
+          token: ${{ secrets.GITHUB_TOKEN }} # Add this line
+
 
 
 
