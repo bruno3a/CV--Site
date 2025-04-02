@@ -87,32 +87,32 @@
     "items": {
       "ai_chatbot": {
         "title": "AI Assisted Chatbot (RAG)",
-        "description": "Implemented a Retrieval-Augmented Generation chatbot using LangChain and enterprise documentation, improving response accuracy by 85% and reducing support tickets by 40%",
+        "description": "Implementation of a Retrieval-Augmented Generation chatbot using LangChain and enterprise documentation, improving response accuracy and query resolution speed by 90%",
         "tags": ["LLMs", "RAG", "Python", "Azure", "Vector DB", "LangChain"]
       },
       "erp_implementation": {
         "title": "ERP Discovery & Implementation",
-        "description": "Led the discovery phase and implementation of an enterprise-wide ERP system, coordinating with stakeholders across 5 departments and managing integration with legacy systems",
+        "description": "Collaborated in the discovery and implementation phase of an enterprise ERP system, coordinating with stakeholders from 6 departments and managing integration with legacy systems",
         "tags": ["Business Analysis", "Process Optimization", "Change Management", "ERP", "Integration"]
       },
       "cpq_implementation": {
         "title": "CPQ System Implementation",
-        "description": "Managed the implementation of a Configure-Price-Quote system across multiple countries, streamlining sales processes and reducing quote generation time by 60%",
+        "description": "Managed the implementation of a Configure-Price-Quote system across multiple countries, optimizing sales processes and reducing quote generation time by 30%, integrating various systems",
         "tags": ["CPQ", "Sales Operations", "Multi-country", "Process Design", "Training"]
       },
       "api_catalog": {
         "title": "API Management Catalog",
-        "description": "Developed and implemented an enterprise API catalog solution, improving developer experience and reducing integration time by 40% through standardized documentation and governance",
+        "description": "Developed and implemented an enterprise API catalog solution, improving developer experience and reducing integration time through standardized documentation and governance, avoiding work duplication",
         "tags": ["API Management", "Documentation", "Governance", "Azure", "Developer Experience"]
       },
       "portfolio": {
         "title": "Personal Portfolio Website",
-        "description": "Designed and developed a responsive personal portfolio website using React and Tailwind CSS, featuring multi-language support and interactive components",
+        "description": "Designed and developed this personal CV website using React and Tailwind CSS, with multi-language support and interactive components through advanced prompting and recent technology",
         "tags": ["React", "Tailwind CSS", "Frontend", "UI/UX", "Personal Branding"]
       },
       "ecommerce": {
         "title": "eCommerce Integration Platform",
-        "description": "Currently developing an eCommerce solution with integrated billing system and Mercado Libre connection, focusing on automated inventory and order management",
+        "description": "Currently working on an e-Commerce site project integrated with Mercado Libre billing system, focused on automated customer and purchase order management",
         "tags": ["eCommerce", "API Integration", "Marketplace", "In Progress", "System Design"]
       }
     }

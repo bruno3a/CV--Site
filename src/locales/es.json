@@ -106,32 +106,32 @@
     "items": {
       "ai_chatbot": {
         "title": "Chatbot Asistido por IA (RAG)",
-        "description": "Implementación de un chatbot con Generación Aumentada por Recuperación usando LangChain y documentación empresarial, mejorando la precisión de respuestas en un 85% y reduciendo tickets de soporte en un 40%",
+        "description": "Implementación de un chatbot con Generación Aumentada por Recuperación usando LangChain y documentación empresarial, mejorando la precisión de respuestas y velocidad de resolución de consultas en un 90%",
         "tags": ["LLMs", "RAG", "Python", "Azure", "Vector DB", "LangChain"]
       },
       "erp_implementation": {
         "title": "Descubrimiento e Implementación de ERP",
-        "description": "Lideré la fase de descubrimiento e implementación de un sistema ERP empresarial, coordinando con stakeholders de 5 departamentos y gestionando la integración con sistemas legacy",
+        "description": "Colaboré en la fase de descubrimiento e implementación de un sistema ERP empresarial, coordinando con stakeholders de 6 departamentos y gestionando la integración con sistemas legacy",
         "tags": ["Análisis de Negocio", "Optimización de Procesos", "Gestión del Cambio", "ERP", "Integración"]
       },
       "cpq_implementation": {
         "title": "Implementación de Sistema CPQ",
-        "description": "Gestioné la implementación de un sistema Configure-Price-Quote en múltiples países, optimizando procesos de venta y reduciendo el tiempo de generación de cotizaciones en un 60%",
+        "description": "Gestioné la implementación de un sistema Configure-Price-Quote en múltiples países, optimizando procesos de venta y reduciendo el tiempo de generación de cotizaciones en un 30%, integrando varios sistemas",
         "tags": ["CPQ", "Operaciones de Venta", "Multi-país", "Diseño de Procesos", "Capacitación"]
       },
       "api_catalog": {
         "title": "Catálogo de Gestión de APIs",
-        "description": "Desarrollé e implementé una solución de catálogo de APIs empresarial, mejorando la experiencia del desarrollador y reduciendo el tiempo de integración en un 40% mediante documentación y gobierno estandarizados",
+        "description": "Desarrollé e implementé una solución de catálogo de APIs empresarial, mejorando la experiencia del desarrollador y reduciendo el tiempo de integración mediante documentación y gobierno estandarizados, evitando duplicidad de trabajo",
         "tags": ["Gestión de APIs", "Documentación", "Gobierno", "Azure", "Experiencia de Desarrollador"]
       },
       "portfolio": {
         "title": "Sitio Web de Portfolio Personal",
-        "description": "Diseñé y desarrollé un sitio web portfolio personal responsive usando React y Tailwind CSS, con soporte multi-idioma y componentes interactivos",
+        "description": "Diseñé y desarrollé este sitio web sobre mi CV personal usando React y Tailwind CSS, con soporte multi-idioma y componentes interactivos mediante el uso de prompting avanzado y tecnología reciente",
         "tags": ["React", "Tailwind CSS", "Frontend", "UI/UX", "Marca Personal"]
       },
       "ecommerce": {
         "title": "Plataforma de Integración eCommerce",
-        "description": "Actualmente desarrollando una solución de comercio electrónico con sistema de facturación integrado y conexión con Mercado Libre, enfocado en la gestión automatizada de inventario y pedidos",
+        "description": "Actualmente me encuentro trabajando en un proyecto de sitio e-Commerce integrado con sistema de facturación Mercado Libre, enfocado en la gestión automatizada de clientes y órdenes de compra.",
         "tags": ["eCommerce", "Integración API", "Marketplace", "En Progreso", "Diseño de Sistemas"]
       }
     }
