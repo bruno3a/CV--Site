@@ -64,6 +64,104 @@ const Education = () => {
     }
   ];
 
+  const certificates = [
+    {
+      key: 'ba_modeling',
+      icon: 'ba-icon.svg',
+      url: 'http://ude.my/UC-226abde9-3f4c-468b-9907-5114fe534991'
+    },
+    {
+      key: 'git',
+      icon: 'git-icon.svg',
+      url: 'http://ude.my/UC-7ea39e70-19cd-489c-842c-f1cc55c35263'
+    },
+    {
+      key: 'ba_problem',
+      icon: 'ba-icon.svg',
+      url: 'http://ude.my/UC-700507d3-5700-4c6e-95b9-5f8e5eb0616d'
+    },
+    {
+      key: 'agile_ba',
+      icon: 'agile-icon.svg',
+      url: 'http://ude.my/UC-98f78080-65f2-451e-8e07-dea84d3a3976'
+    },
+    {
+      key: 'agile_fundamentals',
+      icon: 'agile-icon.svg',
+      url: 'http://ude.my/UC-0c856929-c734-4d59-9a7f-49e85c135981'
+    },
+    {
+      key: 'azure_devops',
+      icon: 'azure-icon.svg',
+      url: 'http://ude.my/UC-077ad9fe-f71f-4fe3-a196-fb188df734b2'
+    },
+    {
+      key: 'business_writing',
+      icon: 'writing-icon.svg',
+      url: 'http://ude.my/UC-1d3646eb-0d53-4383-be92-bb03b0506067'
+    },
+    {
+      key: 'ba_requirements',
+      icon: 'ba-icon.svg',
+      url: 'http://ude.my/UC-3de3b103-9484-4421-a2b7-73f060ac9b6b'
+    },
+    {
+      key: 'user_story',
+      icon: 'agile-icon.svg',
+      url: 'http://ude.my/UC-958cc0ed-4578-411a-9814-8c9900a35ea5'
+    },
+    {
+      key: 'data_science_ml',
+      icon: 'data-icon.svg',
+      url: 'https://drive.google.com/file/d/1UnzQvjfoRtnZm4Lnwm3I_stNDL3fmU9j/view?usp=sharing'
+    },
+    {
+      key: 'data_analyst',
+      icon: 'data-icon.svg',
+      url: 'https://drive.google.com/file/d/1HNvGNq2OG11aZtl5J65DMaiQaP2sE-cf/view?usp=sharing'
+    }
+  ].map(cert => ({
+    ...cert,
+    title: t(`education.certificates.items.${cert.key}.title`),
+    issuer: t(`education.certificates.items.${cert.key}.issuer`),
+    date: t(`education.certificates.items.${cert.key}.date`)
+  }));
+
+  const CertificateBadge = ({ certificate }) => {
+    const handleClick = (e) => {
+      e.preventDefault();
+      window.open(certificate.url, '_blank', 'noopener,noreferrer');
+      console.log(`Opening certificate: ${certificate.title} - ${certificate.url}`);
+    };
+
+    return (
+      <motion.a
+        href={certificate.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleClick}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="card hover:border-primary/50 transition-all duration-300 flex items-start gap-4 group min-h-[90px]"
+        whileHover={{ scale: 1.02 }}
+      >
+        <div className="text-primary group-hover:text-primary-light transition-colors pt-1">
+          <img 
+            src={`${process.env.PUBLIC_URL}/icons/${certificate.icon}`} 
+            alt={certificate.title}
+            className="w-8 h-8"
+          />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="font-medium text-gray-200 text-sm leading-tight mb-1">{certificate.title}</h3>
+          <p className="text-gray-400 text-sm">{certificate.issuer} • {certificate.date}</p>
+        </div>
+      </motion.a>
+    );
+  };
+
   return (
     <section id="education" className="section-container">
       <motion.div
@@ -162,6 +260,16 @@ const Education = () => {
             ))}
           </div>
         </motion.div>
+
+        {/* Certificates Section */}
+        <div className="mt-8">
+          <h3 className="text-xl font-semibold mb-4">{t('education.certificates.title')}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            {certificates.map((cert, index) => (
+              <CertificateBadge key={index} certificate={cert} />
+            ))}
+          </div>
+        </div>
       </motion.div>
     </section>
   );

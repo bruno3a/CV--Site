@@ -177,6 +177,77 @@
           "Participação em competições de estudos de caso"
         ]
       }
+    },
+    "certificates": {
+      "title": "Certificados",
+      "items": {
+        "ba_modeling": {
+          "title": "Modelagem e Técnicas de Análise de Negócios",
+          "issuer": "Udemy",
+          "date": "2021",
+          "url": "http://ude.my/UC-226abde9-3f4c-468b-9907-5114fe534991"
+        },
+        "git": {
+          "title": "Git Going Fast: Curso Intensivo de Git",
+          "issuer": "Udemy",
+          "date": "2021",
+          "url": "http://ude.my/UC-7ea39e70-19cd-489c-842c-f1cc55c35263"
+        },
+        "ba_problem": {
+          "title": "Identificação e Definição de Problemas em Análise de Negócios",
+          "issuer": "Udemy",
+          "date": "2021",
+          "url": "http://ude.my/UC-700507d3-5700-4c6e-95b9-5f8e5eb0616d"
+        },
+        "agile_ba": {
+          "title": "Análise de Negócios Ágil",
+          "issuer": "Udemy",
+          "date": "2021",
+          "url": "http://ude.my/UC-98f78080-65f2-451e-8e07-dea84d3a3976"
+        },
+        "agile_fundamentals": {
+          "title": "Fundamentos Ágeis: Incluindo Scrum e Kanban",
+          "issuer": "Udemy",
+          "date": "2021",
+          "url": "http://ude.my/UC-0c856929-c734-4d59-9a7f-49e85c135981"
+        },
+        "azure_devops": {
+          "title": "Azure DevOps Boards para Gerentes de Projeto/Analistas/Desenvolvedores",
+          "issuer": "Udemy",
+          "date": "2021",
+          "url": "http://ude.my/UC-077ad9fe-f71f-4fe3-a196-fb188df734b2"
+        },
+        "business_writing": {
+          "title": "Melhores Habilidades de Escrita Empresarial",
+          "issuer": "Udemy",
+          "date": "2021",
+          "url": "http://ude.my/UC-1d3646eb-0d53-4383-be92-bb03b0506067"
+        },
+        "ba_requirements": {
+          "title": "Análise de Negócios: Desenvolvendo Requisitos",
+          "issuer": "Udemy",
+          "date": "2021",
+          "url": "http://ude.my/UC-3de3b103-9484-4421-a2b7-73f060ac9b6b"
+        },
+        "user_story": {
+          "title": "Masterclass de User Stories: Seu Guia Ágil",
+          "issuer": "Udemy",
+          "date": "2021",
+          "url": "http://ude.my/UC-958cc0ed-4578-411a-9814-8c9900a35ea5"
+        },
+        "data_science_ml": {
+          "title": "Ciência de Dados - Machine Learning",
+          "issuer": "Digital House",
+          "date": "2021",
+          "url": "https://drive.google.com/file/d/1UnzQvjfoRtnZm4Lnwm3I_stNDL3fmU9j/view?usp=sharing"
+        },
+        "data_analyst": {
+          "title": "Analista de Dados",
+          "issuer": "EANT",
+          "date": "2020",
+          "url": "https://drive.google.com/file/d/1HNvGNq2OG11aZtl5J65DMaiQaP2sE-cf/view?usp=sharing"
+        }
+      }
     }
   },
   "skills": {
@@ -248,6 +319,8 @@
     }
   }
 }
+
+
 
 
 
