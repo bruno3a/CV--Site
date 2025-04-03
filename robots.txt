@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bruno3a.github.io/CV--Site/sitemap.xml
+Sitemap: https://nextba.com/sitemap.xml
