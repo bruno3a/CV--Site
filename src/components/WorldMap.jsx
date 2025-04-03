@@ -85,7 +85,7 @@ const WorldMap = () => {
     },
     {
       country: "Argentina",
-      projects: 1,
+      projects: 2,
       description: "ERP Implementation",
       flagUrl: "https://flagcdn.com/ar.svg"
     },
@@ -100,29 +100,29 @@ const WorldMap = () => {
   return (
     <section id="worldmap" className="container mx-auto py-20">
       <h2 className="text-3xl font-bold text-center mb-10">{t('sections.worldmap.title')}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto px-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 max-w-7xl mx-auto px-4">
         {workExperience.map((experience, index) => (
           <motion.div
             key={experience.country}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-background-light rounded-lg p-4 hover:bg-background-dark transition-colors"
+            className="bg-background-light rounded-lg p-2 md:p-4 hover:bg-background-dark transition-colors"
           >
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-2">
               <img 
                 src={experience.flagUrl}
                 alt={`${experience.country} flag`}
-                className="w-8 h-6 object-cover rounded shadow-sm"
+                className="w-6 h-4 md:w-8 md:h-6 object-cover rounded shadow-sm"
                 loading="lazy"
               />
-              <span className="text-primary font-bold">
+              <span className="text-primary font-bold text-sm md:text-base">
                 {experience.projects}
-                <span className="text-sm ml-1">projects</span>
+                <span className="text-xs md:text-sm ml-1">projects</span>
               </span>
             </div>
-            <h3 className="text-lg font-semibold mb-1">{experience.country}</h3>
-            <p className="text-gray-400 text-sm">{experience.description}</p>
+            <h3 className="text-sm md:text-lg font-semibold truncate">{experience.country}</h3>
+            <p className="text-gray-400 text-xs hidden md:block">{experience.description}</p>
           </motion.div>
         ))}
       </div>
@@ -131,6 +131,8 @@ const WorldMap = () => {
 };
 
 export default WorldMap;
+
+
 
 
 
