@@ -30,8 +30,12 @@ jobs:
           REACT_APP_BOTPRESS_MESSAGING_URL: ${{ secrets.REACT_APP_BOTPRESS_MESSAGING_URL }}
           REACT_APP_BOTPRESS_BOT_ID: ${{ secrets.REACT_APP_BOTPRESS_BOT_ID }}
           CI: false
-          PUBLIC_URL: /CV--Site
+          # Eliminar o actualizar PUBLIC_URL para usar el dominio personalizado
+          PUBLIC_URL: https://nextba.com
         run: npm run build
+
+      - name: Create CNAME
+        run: echo "nextba.com" > build/CNAME
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -40,6 +44,7 @@ jobs:
           branch: gh-pages
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }} # Add this line
+
 
 
 
