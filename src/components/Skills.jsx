@@ -29,16 +29,17 @@ const Skills = () => {
         { name: t('skills.categories.methodologies.skills.agile_scrum'), level: 95 },
         { name: t('skills.categories.methodologies.skills.kanban'), level: 90 },
         { name: t('skills.categories.methodologies.skills.lean'), level: 75 },
-        { name: t('skills.categories.methodologies.skills.design_thinking'), level: 75 },
       ],
     },
     {
       title: t('skills.categories.technical.title'),
       skills: [
         { name: t('skills.categories.technical.skills.sql'), level: 85 },
-        { name: t('skills.categories.technical.skills.python'), level: 80 },
-        { name: t('skills.categories.technical.skills.api_management'), level: 90 },
-        { name: t('skills.categories.technical.skills.data_visualization'), level: 85 },
+        { name: t('skills.categories.technical.skills.python'), level: 60 },
+        { name: t('skills.categories.technical.skills.r'), level: 60 },
+        { name: t('skills.categories.technical.skills.api_management'), level: 85 },
+        { name: t('skills.categories.technical.skills.azure_devops'), level: 85 },
+        { name: t('skills.categories.technical.skills.data_visualization'), level: 80 },
       ],
     },
   ];

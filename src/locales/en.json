@@ -156,6 +156,8 @@
         "skills": {
           "sql": "SQL",
           "python": "Python",
+          "r": "R",
+          "azure_devops": "Azure DevOps",
           "api_management": "API Management",
           "data_visualization": "Data Visualization"
         }

@@ -223,10 +223,16 @@ const Education = () => {
   }));
 
   const CertificateBadge = ({ certificate }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    
     const handleClick = (e) => {
-      e.preventDefault();
-      window.open(certificate.url, '_blank', 'noopener,noreferrer');
-      console.log(`Opening certificate: ${certificate.title} - ${certificate.url}`);
+      if (window.innerWidth < 768) {
+        e.preventDefault();
+        setIsExpanded(!isExpanded);
+      } else {
+        window.open(certificate.url, '_blank', 'noopener,noreferrer');
+        console.log(`Opening certificate: ${certificate.title} - ${certificate.url}`);
+      }
     };
 
     return (
@@ -239,20 +245,29 @@ const Education = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6 }}
-        className="card hover:border-primary/50 transition-all duration-300 flex items-start gap-4 group min-h-[90px]"
+        className={`card hover:border-primary/50 transition-all duration-300 
+          md:flex md:items-start md:gap-4 group
+          ${isExpanded ? 'min-h-[70px]' : 'min-h-[45px]'}
+          p-2 md:p-6 cursor-pointer`}
         whileHover={{ scale: 1.02 }}
-        style={{ opacity: 1 }} // Forzar opacidad 1 para mantener visible
       >
-        <div className="text-primary group-hover:text-primary-light transition-colors pt-1">
+        <div className="text-primary group-hover:text-primary-light transition-colors 
+          float-left md:float-none mr-2 md:mr-0">
           <img 
             src={`${process.env.PUBLIC_URL}/icons/${certificate.icon}`} 
             alt={certificate.title}
-            className="w-8 h-8"
+            className="w-4 h-4 md:w-8 md:h-8"
           />
         </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="font-medium text-gray-200 text-sm leading-tight mb-1">{certificate.title}</h3>
-          <p className="text-gray-400 text-sm">{certificate.issuer} • {certificate.date}</p>
+        <div className="flex-1 min-w-0 overflow-hidden pt-0.5 md:pt-0">
+          <h3 className="font-medium text-gray-200 text-xs md:text-sm leading-tight mb-0.5 md:mb-1 
+            truncate md:normal-case">
+            {certificate.title}
+          </h3>
+          <p className={`text-gray-400 text-[10px] md:text-sm transition-all duration-300
+            ${isExpanded ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0 md:opacity-100 md:max-h-20'}`}>
+            {certificate.issuer} • {certificate.date}
+          </p>
         </div>
       </motion.a>
     );
@@ -429,10 +444,10 @@ const Education = () => {
         </motion.div>
 
         {/* Certificates Section */}
-        <div className="mt-8">
-          <h3 className="text-xl font-semibold mb-4">{t('education.certificates.title')}</h3>
+        <div className="mt-6 md:mt-8"> {/* Reducido el margen superior en móvil */}
+          <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">{t('education.certificates.title')}</h3>
           <div 
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-1.5 md:gap-4"
             style={{ minHeight: certificates.length > 0 ? 'auto' : '0' }}
           >
             {certificates.map((cert, index) => (
