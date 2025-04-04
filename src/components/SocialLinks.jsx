@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTelegram, FaWhatsapp } from 'react-icons/fa';
+import SecureContent from './SecureContent';
 
 const SocialLinks = () => {
   const [isShining, setIsShining] = useState(false);
@@ -52,23 +53,27 @@ const SocialLinks = () => {
   const links = [
     {
       name: 'GitHub',
-      url: 'https://github.com/bruno3a',
-      icon: <FaGithub className="text-5xl" />
+      url: btoa('https://github.com/bruno3a'),
+      icon: <FaGithub className="text-5xl" />,
+      type: 'url'
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/btrezza/',
-      icon: <FaLinkedin className="text-5xl" />
+      url: btoa('https://www.linkedin.com/in/btrezza/'),
+      icon: <FaLinkedin className="text-5xl" />,
+      type: 'url'
     },
     {
       name: 'Telegram',
-      url: 'https://t.me/bruno_9000',
-      icon: <FaTelegram className="text-5xl" />
+      url: btoa('https://t.me/bruno_9000'),
+      icon: <FaTelegram className="text-5xl" />,
+      type: 'url'
     },
     {
       name: 'WhatsApp',
-      url: 'https://wa.me/5491134821203',
-      icon: <FaWhatsapp className="text-5xl" />
+      url: btoa('https://wa.me/5491134821203'),
+      icon: <FaWhatsapp className="text-5xl" />,
+      type: 'url'
     }
   ];
 
@@ -81,25 +86,28 @@ const SocialLinks = () => {
     >
       <div className="flex flex-col gap-8">
         {links.map((link, index) => (
-          <motion.a
+          <motion.div
             key={link.name}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             className={`social-icon-link relative text-primary hover:text-primary-light transition-all duration-300
               ${isShining ? 'shine-active' : ''}`}
           >
-            <div className="relative overflow-hidden">
-              {link.icon}
-              <div 
-                className={`absolute inset-0 bg-gradient-to-b from-white/20 via-white/20 to-transparent shine-effect-vertical`}
-                style={{
-                  animationDelay: isShining ? `${index * 150}ms` : '0ms'
-                }}
-              />
-            </div>
-          </motion.a>
+            <SecureContent 
+              content={link.url} 
+              type={link.type}
+              name={link.name}
+            >
+              <div className="relative overflow-hidden">
+                {link.icon}
+                <div 
+                  className={`absolute inset-0 bg-gradient-to-b from-white/20 via-white/20 to-transparent shine-effect-vertical`}
+                  style={{
+                    animationDelay: isShining ? `${index * 150}ms` : '0ms'
+                  }}
+                />
+              </div>
+            </SecureContent>
+          </motion.div>
         ))}
       </div>
     </motion.div>

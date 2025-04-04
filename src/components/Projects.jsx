@@ -67,8 +67,8 @@ const Projects = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Imagen del proyecto */}
-              <div className="aspect-video overflow-hidden rounded-lg mb-4">
+              {/* Imagen del proyecto - Ajustada para móvil */}
+              <div className="aspect-video overflow-hidden rounded-lg mb-4 h-[150px] md:h-auto">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -77,12 +77,12 @@ const Projects = () => {
               </div>
 
               {/* Contenido */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold text-primary">{project.title}</h3>
-                <p className="text-gray-400">{project.description}</p>
+              <div className="space-y-2 md:space-y-4">
+                <h3 className="text-lg md:text-xl font-bold text-primary">{project.title}</h3>
+                <p className="text-sm md:text-base text-gray-400">{project.description}</p>
                 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2">
+                {/* Tags - Ocultos en móvil */}
+                <div className="hidden md:flex flex-wrap gap-2">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}

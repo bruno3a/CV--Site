@@ -275,6 +275,12 @@
     "location": {
       "title": "Location",
       "value": "Buenos Aires, Argentina"
+    },
+    "actions": {
+      "telegram": "Click to contact me",
+      "whatsapp": "Click to contact me",
+      "email": "Click to contact me",
+      "location": "Click to view location"
     }
   },
   "chat": {

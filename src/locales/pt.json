@@ -301,6 +301,12 @@
     "location": {
       "title": "Localização",
       "value": "Buenos Aires, Argentina"
+    },
+    "actions": {
+      "telegram": "Clique para me contatar",
+      "whatsapp": "Clique para me contatar",
+      "email": "Clique para me contatar",
+      "location": "Clique para ver localização"
     }
   },
   "chat": {
@@ -325,6 +331,7 @@
     }
   }
 }
+
 
 
 
