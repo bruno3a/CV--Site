@@ -1,6 +1,6 @@
 {
-  "short_name": "Bruno Trezza CV",
-  "name": "Bruno Trezza - Perfil Personal",
+  "short_name": "Bruno Trezza Portfolio",
+  "name": "Bruno Trezza - Business Analyst, Product Owner & AI Enthusiast - Profile",
   "icons": [
     {
       "src": "icons/bt-favicon.svg",
@@ -13,4 +13,5 @@
   "theme_color": "#111827",
   "background_color": "#111827"
 }
+
 

@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# Protect against email harvesting
+Disallow: /*@*
+Disallow: /mailto:*
+
+# Protect sensitive directories
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /files/
+
 Sitemap: https://nextba.com/sitemap.xml
