@@ -35,6 +35,9 @@ const App = () => {
           <Education />
           <Skills />
           <Contact />
+          
+          {/* Espacio adicional al final del sitio */}
+          <div className="h-32 md:h-24" /> {/* 128px en mobile, 96px en desktop */}
         </main>
         
         <SocialLinks />
