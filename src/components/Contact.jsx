@@ -98,7 +98,7 @@ const Contact = () => {
           <h2 className="section-title">{t('sections.contact.title')}</h2>
           <p className="section-subtitle text-gray-400 mb-8">{t('sections.contact.subtitle')}</p>
           
-          <div className="flex flex-row flex-nowrap gap-4 overflow-x-auto pb-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
             {contactMethods.map((method, index) => (
               <motion.div
                 key={index}
@@ -106,7 +106,7 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`card hover:border-primary/50 transition-all duration-300 flex items-center gap-4 group min-w-[250px] flex-1 ${method.onClick ? 'cursor-pointer' : ''}`}
+                className={`card hover:border-primary/50 transition-all duration-300 flex items-center gap-2 sm:gap-4 group ${method.onClick ? 'cursor-pointer' : ''}`}
                 onClick={method.onClick}
               >
                 <div className="text-primary group-hover:text-primary-light transition-colors">
@@ -114,8 +114,8 @@ const Contact = () => {
                 </div>
                 {method.isPublic ? (
                   <div className="min-w-0">
-                    <h3 className="font-medium text-gray-200 truncate">{method.title}</h3>
-                    <p className="text-gray-400 truncate">{method.actionText}</p>
+                    <h3 className="font-medium text-gray-200 truncate text-sm sm:text-base">{method.title}</h3>
+                    <p className="text-gray-400 truncate text-xs sm:text-sm">{method.actionText}</p>
                   </div>
                 ) : (
                   <SecureContent
@@ -124,8 +124,8 @@ const Contact = () => {
                     name={method.title}
                   >
                     <div className="min-w-0">
-                      <h3 className="font-medium text-gray-200 truncate">{method.title}</h3>
-                      <p className="text-gray-400 truncate">{method.actionText}</p>
+                      <h3 className="font-medium text-gray-200 truncate text-sm sm:text-base">{method.title}</h3>
+                      <p className="text-gray-400 truncate text-xs sm:text-sm">{method.actionText}</p>
                     </div>
                   </SecureContent>
                 )}
