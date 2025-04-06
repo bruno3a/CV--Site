@@ -274,13 +274,13 @@
     "send_message": "Send Message",
     "location": {
       "title": "Location",
-      "value": "Buenos Aires, Argentina"
+      "value": "Buenos Aires, Argentina",
+      "timezone": "GMT-3 (Argentina Time)"
     },
     "actions": {
       "telegram": "Click to contact me",
       "whatsapp": "Click to contact me",
-      "email": "Click to contact me",
-      "location": "Click to view location"
+      "email": "Click to contact me"
     }
   },
   "chat": {

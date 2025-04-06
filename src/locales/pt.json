@@ -300,13 +300,13 @@
   "contact": {
     "location": {
       "title": "Localização",
-      "value": "Buenos Aires, Argentina"
+      "value": "Buenos Aires, Argentina",
+      "timezone": "GMT-3 (Horário da Argentina)"
     },
     "actions": {
       "telegram": "Clique para me contatar",
       "whatsapp": "Clique para me contatar",
-      "email": "Clique para me contatar",
-      "location": "Clique para ver localização"
+      "email": "Clique para me contatar"
     }
   },
   "chat": {
@@ -331,12 +331,5 @@
     }
   }
 }
-
-
-
-
-
-
-
 
 

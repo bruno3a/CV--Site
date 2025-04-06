@@ -78,11 +78,11 @@ const Contact = () => {
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
-      title: t('contact.location.title'),
-      value: t('contact.location.value'),
+      title: 'Buenos Aires, Argentina',
+      value: t('contact.location.timezone'),
       isPublic: true,
       onClick: () => setIsMapOpen(true),
-      actionText: t('contact.actions.location')
+      actionText: t('contact.location.timezone')
     }
   ];
 

@@ -321,13 +321,13 @@
   "contact": {
     "location": {
       "title": "Ubicación",
-      "value": "Buenos Aires, Argentina"
+      "value": "Buenos Aires, Argentina",
+      "timezone": "GMT-3 (Hora Argentina)"
     },
     "actions": {
       "telegram": "Haz clic para contactarme",
       "whatsapp": "Haz clic para contactarme",
-      "email": "Haz clic para contactarme",
-      "location": "Haz clic para ver ubicación"
+      "email": "Haz clic para contactarme"
     }
   }
 }
