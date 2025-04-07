@@ -54,7 +54,7 @@ const Skills = () => {
       >
         <h2 className="section-title">Skills & Expertise</h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -64,23 +64,23 @@ const Skills = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="card"
             >
-              <h3 className="text-xl font-bold text-primary mb-6">{category.title}</h3>
+              <h3 className="text-lg md:text-xl font-bold text-primary mb-3 md:mb-6">{category.title}</h3>
               
-              <div className="space-y-4">
+              <div className="space-y-2 md:space-y-4">
                 {category.skills.map((skill, idx) => (
-                  <div key={idx}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-300">{skill.name}</span>
-                      <span className="text-primary">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-background-dark rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.2 }}
-                        className="h-full bg-primary rounded-full"
-                      />
+                  <div key={idx} className="flex items-center gap-2">
+                    <span className="text-gray-300 text-sm md:text-base flex-1">{skill.name}</span>
+                    <div className="w-48 md:w-64 flex items-center gap-2">
+                      <div className="flex-1 h-1.5 md:h-2 bg-background-dark rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, delay: 0.2 }}
+                          className="h-full bg-primary rounded-full"
+                        />
+                      </div>
+                      <span className="text-primary text-xs md:text-sm w-8">{skill.level}%</span>
                     </div>
                   </div>
                 ))}
