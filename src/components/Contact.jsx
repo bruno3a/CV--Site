@@ -122,10 +122,11 @@ const Contact = () => {
                     content={method.value}
                     type={method.type}
                     name={method.title}
+                    showOnHover={true}
                   >
                     <div className="min-w-0">
                       <h3 className="font-medium text-gray-200 truncate text-sm sm:text-base">{method.title}</h3>
-                      <p className="text-gray-400 truncate text-xs sm:text-sm">{method.actionText}</p>
+                      <p className="text-gray-400 truncate text-xs sm:text-sm group-hover:hidden">{method.actionText}</p>
                     </div>
                   </SecureContent>
                 )}

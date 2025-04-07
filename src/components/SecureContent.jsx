@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const SecureContent = ({ content, type = 'text', children, name }) => {
+const SecureContent = ({ content, type = 'text', children, name, showOnHover = false }) => {
   const [isHuman, setIsHuman] = useState(false);
   const [decodedContent, setDecodedContent] = useState('');
   
@@ -57,10 +57,11 @@ const SecureContent = ({ content, type = 'text', children, name }) => {
       return;
     }
     
+    const decodedLink = atob(content); // Asegúrate de que content sea el link, no el value
     if (type === 'email') {
-      window.location.href = `mailto:${decodedContent}`;
+      window.location.href = `mailto:${decodedLink}`;
     } else if (type === 'url') {
-      window.open(decodedContent, '_blank');
+      window.open(decodedLink, '_blank');
     }
   };
   
@@ -69,12 +70,17 @@ const SecureContent = ({ content, type = 'text', children, name }) => {
       <div 
         onClick={handleClick}
         onKeyDown={(e) => e.key === 'Enter' && handleClick()}
-        className="cursor-pointer focus:outline-blue-500 focus:ring-2"
+        className="cursor-pointer focus:outline-blue-500 focus:ring-2 w-full"
         tabIndex={0}
         role="button"
         aria-label={type === 'url' ? `Visit ${name} profile` : `Contact via ${name}`}
       >
         {children}
+        {showOnHover && isHuman && (
+          <p className="text-gray-400 truncate text-xs sm:text-sm hidden group-hover:block">
+            {decodedContent}
+          </p>
+        )}
       </div>
       
       {/* Versión para SEO y usuarios sin JS */}
@@ -97,3 +103,4 @@ const SecureContent = ({ content, type = 'text', children, name }) => {
 };
 
 export default SecureContent;
+

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTelegram, FaWhatsapp } from 'react-icons/fa';
+import { SiGmail } from 'react-icons/si';
 import SecureContent from './SecureContent';
 
 const SocialLinks = () => {
@@ -10,28 +11,23 @@ const SocialLinks = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Solo aplicar en dispositivos móviles
       if (window.innerWidth <= 768) {
         const currentScrollY = window.scrollY;
         
         if (currentScrollY > lastScrollY) {
-          // Scrolling down
           setIsVisible(false);
         } else {
-          // Scrolling up
           setIsVisible(true);
         }
         
         setLastScrollY(currentScrollY);
       } else {
-        // En desktop siempre visible
         setIsVisible(true);
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     
-    // Verificar el tamaño de la pantalla al montar
     if (window.innerWidth > 768) {
       setIsVisible(true);
     }
@@ -54,25 +50,31 @@ const SocialLinks = () => {
     {
       name: 'GitHub',
       url: btoa('https://github.com/bruno3a'),
-      icon: <FaGithub className="text-5xl" />,
+      icon: <FaGithub className="text-[2.7rem]" />,
       type: 'url'
     },
     {
       name: 'LinkedIn',
       url: btoa('https://www.linkedin.com/in/btrezza/'),
-      icon: <FaLinkedin className="text-5xl" />,
+      icon: <FaLinkedin className="text-[2.7rem]" />,
       type: 'url'
+    },
+    {
+      name: 'Gmail',
+      url: btoa('bruno.trezza@gmail.com'),
+      icon: <SiGmail className="text-[2.7rem]" />,
+      type: 'email'
     },
     {
       name: 'Telegram',
       url: btoa('https://t.me/bruno_9000'),
-      icon: <FaTelegram className="text-5xl" />,
+      icon: <FaTelegram className="text-[2.7rem]" />,
       type: 'url'
     },
     {
       name: 'WhatsApp',
       url: btoa('https://wa.me/5491134821203'),
-      icon: <FaWhatsapp className="text-5xl" />,
+      icon: <FaWhatsapp className="text-[2.7rem]" />,
       type: 'url'
     }
   ];
