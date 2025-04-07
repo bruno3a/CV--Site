@@ -284,7 +284,7 @@
     }
   },
   "chat": {
-    "let_me_help_you": "Let me help you!",
+    "let_me_help_you": "Ask me about Bruno!",
     "title": "Chat with Bruno's Assistant",
     "coming_soon": "Coming soon...",
     "placeholder": "Type your message...",

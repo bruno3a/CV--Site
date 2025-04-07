@@ -311,7 +311,7 @@
   },
   "chat": {
     "get_instant_help": "Obter ajuda instantânea",
-    "let_me_help_you": "Deixe-me ajudar!",
+    "let_me_help_you": "Pergunte-me sobre o Bruno!",
     "title": "Chat com o Assistente do Bruno",
     "coming_soon": "Em breve...",
     "placeholder": "Digite sua mensagem...",
@@ -331,6 +331,7 @@
     }
   }
 }
+
 
 
 
