@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "https://nextba.com/static/css/main.56bb9574.css",
-    "main.js": "https://nextba.com/static/js/main.55ffe634.js",
+    "main.css": "https://nextba.com/static/css/main.82caae9f.css",
+    "main.js": "https://nextba.com/static/js/main.8c3a117e.js",
     "index.html": "https://nextba.com/index.html",
-    "main.56bb9574.css.map": "https://nextba.com/static/css/main.56bb9574.css.map",
-    "main.55ffe634.js.map": "https://nextba.com/static/js/main.55ffe634.js.map"
+    "main.82caae9f.css.map": "https://nextba.com/static/css/main.82caae9f.css.map",
+    "main.8c3a117e.js.map": "https://nextba.com/static/js/main.8c3a117e.js.map"
   },
   "entrypoints": [
-    "static/css/main.56bb9574.css",
-    "static/js/main.55ffe634.js"
+    "static/css/main.82caae9f.css",
+    "static/js/main.8c3a117e.js"
   ]
 }
