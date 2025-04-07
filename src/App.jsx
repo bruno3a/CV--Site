@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
-import LanguageSelector from './components/LanguageSelector';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -22,7 +21,6 @@ const App = () => {
   return (
     <LanguageProvider>
       <div className="bg-background min-h-screen text-white">
-        <LanguageSelector />
         <Navbar />
         <main className="relative">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
@@ -36,8 +34,7 @@ const App = () => {
           <Skills />
           <Contact />
           
-          {/* Espacio adicional al final del sitio */}
-          <div className="h-32 md:h-24" /> {/* 128px en mobile, 96px en desktop */}
+          <div className="h-32 md:h-24" />
         </main>
         
         <SocialLinks />

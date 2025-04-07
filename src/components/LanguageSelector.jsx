@@ -30,7 +30,7 @@ const languages = [
   },
 ];
 
-const LanguageSelector = () => {
+const LanguageSelector = ({ isMobile = false, onOpen = () => {}, isMenuOpen = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
   
@@ -47,16 +47,30 @@ const LanguageSelector = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
+  // Cerrar el selector de idioma cuando se abre el menú hamburguesa
+  useEffect(() => {
+    if (isMenuOpen) {
+      setIsOpen(false);
+    }
+  }, [isMenuOpen]);
+
+  const handleLanguageSelectorClick = () => {
+    if (isMenuOpen) {
+      onOpen(false); // Cerrar el menú hamburguesa
+    }
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="fixed top-4 right-20 z-[100] language-selector">
+    <div className="language-selector">
       <div className="relative">
         <button
           type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center justify-between space-x-2 bg-background-light rounded-lg px-4 py-2 
-                   text-white hover:bg-background-dark transition-all duration-300 min-w-[140px]
-                   border border-gray-700 hover:border-primary/50 shadow-lg
-                   active:scale-95 select-none cursor-pointer"
+          onClick={handleLanguageSelectorClick}
+          className={`flex items-center justify-between bg-background-light rounded-lg 
+                     transition-all duration-300 border border-gray-700 hover:border-primary/50
+                     active:scale-95 select-none cursor-pointer
+                     ${isMobile ? 'px-2 py-2' : 'px-3 py-2 space-x-2'}`}
           aria-label="Select language"
           aria-expanded={isOpen}
         >
@@ -66,20 +80,26 @@ const LanguageSelector = () => {
               alt={`${selectedLang.name} flag`}
               className="w-5 h-5 rounded-sm object-cover"
             />
-            <span className="ml-2 font-medium">{selectedLang.name}</span>
+            {!isMobile && (
+              <span className="ml-2 font-medium text-white">{selectedLang.name}</span>
+            )}
           </div>
-          <motion.div
-            animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <FaChevronDown className="text-gray-400" />
-          </motion.div>
+          {!isMobile && (
+            <motion.div
+              animate={{ rotate: isOpen ? 180 : 0 }}
+              transition={{ duration: 0.2 }}
+              className="ml-2"
+            >
+              <FaChevronDown className="text-gray-400" />
+            </motion.div>
+          )}
         </button>
 
         <div
-          className={`absolute top-full right-0 mt-2 bg-background-light rounded-lg shadow-xl 
-                   overflow-hidden min-w-[140px] border border-gray-700 transition-all duration-200
-                   ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+          className={`absolute top-full ${isMobile ? 'right-0' : 'left-0'} mt-2 
+                     bg-background-light rounded-lg shadow-xl overflow-hidden
+                     min-w-[140px] border border-gray-700 transition-all duration-200
+                     ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
         >
           {languages.map((lang) => (
             <button
