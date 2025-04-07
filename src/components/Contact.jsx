@@ -120,6 +120,7 @@ const Contact = () => {
                 ) : (
                   <SecureContent
                     content={method.value}
+                    link={method.link}
                     type={method.type}
                     name={method.title}
                     showOnHover={true}

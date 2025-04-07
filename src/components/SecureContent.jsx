@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const SecureContent = ({ content, type = 'text', children, name, showOnHover = false }) => {
+const SecureContent = ({ content, type = 'text', children, name, showOnHover = false, link }) => {
   const [isHuman, setIsHuman] = useState(false);
   const [decodedContent, setDecodedContent] = useState('');
   
@@ -57,11 +57,11 @@ const SecureContent = ({ content, type = 'text', children, name, showOnHover = f
       return;
     }
     
-    const decodedLink = atob(content); // Asegúrate de que content sea el link, no el value
+    const decodedLink = atob(link || content);
     if (type === 'email') {
       window.location.href = `mailto:${decodedLink}`;
     } else if (type === 'url') {
-      window.open(decodedLink, '_blank');
+      window.open(decodedLink, '_blank', 'noopener,noreferrer');
     }
   };
   
@@ -103,4 +103,7 @@ const SecureContent = ({ content, type = 'text', children, name, showOnHover = f
 };
 
 export default SecureContent;
+
+
+
 
