@@ -301,3 +301,44 @@
   height: 8px;
   background-color: #111827; /* bg-gray-900 */
 }
+
+/* Scroll Hint Animation */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.scroll-hint {
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.scroll-hint-icon {
+  animation: floating 2s ease-in-out infinite;
+}
+
+/* Aseguramos que la sección hero tenga espacio suficiente */
+.min-h-screen {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mejoramos la visibilidad del hint */
+.text-primary {
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.3));
+}

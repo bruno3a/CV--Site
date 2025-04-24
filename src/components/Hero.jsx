@@ -1,15 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { FaTelegram, FaFileDownload, FaRobot } from 'react-icons/fa';
+import { FaTelegram, FaFileDownload, FaRobot, FaChevronDown } from 'react-icons/fa';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
   const { t } = useLanguage();
+  const [showScrollHint, setShowScrollHint] = useState(false);
   const [showPointer, setShowPointer] = useState(false);
   const [showSpotlight, setShowSpotlight] = useState(false);
   const [pointerPosition, setPointerPosition] = useState({ x: 0, y: 0 });
   const chatButtonRef = useRef(null);
+
+  const scrollToNextSection = () => {
+    const aboutSection = document.querySelector('#about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowScrollHint(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const calculatePointerPosition = (buttonElement) => {
     if (!buttonElement) return null;
@@ -156,6 +172,28 @@ const Hero = () => {
             </motion.div>
           </div>
         </div>
+
+        {/* Scroll Hint Animation */}
+        {showScrollHint && (
+          <motion.button 
+            onClick={scrollToNextSection}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ 
+              opacity: [0, 1, 1, 0],
+              y: [-10, 0, 10, 20]
+            }}
+            transition={{ 
+              duration: 2,
+              repeat: Infinity,
+              repeatDelay: 0.5
+            }}
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 
+                       text-primary cursor-pointer hover:scale-125 
+                       transition-transform duration-300"
+          >
+            <FaChevronDown className="text-5xl" />
+          </motion.button>
+        )}
       </section>
       
       {/* Efectos visuales */}
