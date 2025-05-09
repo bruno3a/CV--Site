@@ -42,10 +42,25 @@
   "experience": {
     "title": "Experience",
     "roles": {
+      "tech_consultant": {
+        "title": "Technology & AI Consultant | Software & Web Solutions",
+        "company": "Self Employed",
+        "period": "January 2025 - Present",
+        "description": {
+          "1": "Design web solutions integrating APIs, dashboards, and continuous deployment pipelines",
+          "2": "Deploy scalable applications to cloud infrastructure",
+          "3": "Integrate AI services to enhance user experience and operational efficiency",
+          "4": "Developed hands-on experience with AI, continuous delivery practices, and cloud deployments",
+          "5": "Strengthened technical expertise within API design, front-end and back-end development, and cloud infrastructure management",
+          "6": "Delivered working prototypes showcasing features across different environments",
+          "7": "Streamlined development workflow through improved requirements gathering and documentation practices",
+          "8": "Tech Stack: JavaScript, Python, React, Node.js, AWS, Docker, OpenAI API, MongoDB, CI/CD tools"
+        }
+      },
       "ey": {
         "title": "Business Analyst - Product Owner",
         "company": "Ernst & Young - in representation of Hexaware Technologies",
-        "period": "December 2021 - Present",
+        "period": "December 2021 - January 2025",
         "description": {
           "1": "Gathered product requirements and managed backlog refinement in Azure DevOps",
           "2": "Led Scrum-ban ceremonies, release planning, and cross-functional team coordination",

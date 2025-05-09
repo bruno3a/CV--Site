@@ -62,10 +62,25 @@
   "experience": {
     "title": "Experiencia",
     "roles": {
+      "tech_consultant": {
+        "title": "Consultor de Tecnología e IA | Soluciones de Software y Web",
+        "company": "Autónomo",
+        "period": "Enero 2025 - Presente",
+        "description": {
+          "1": "Diseño de soluciones web integrando APIs, dashboards y pipelines de despliegue continuo",
+          "2": "Despliegue de aplicaciones escalables en infraestructura cloud",
+          "3": "Integración de servicios de IA para mejorar la experiencia de usuario y la eficiencia operativa",
+          "4": "Desarrollo de experiencia práctica con IA, prácticas de entrega continua y despliegues en la nube",
+          "5": "Fortalecimiento de la experiencia técnica en diseño de APIs, desarrollo front-end y back-end, y gestión de infraestructura cloud",
+          "6": "Entrega de prototipos funcionales mostrando características en diferentes entornos",
+          "7": "Optimización del flujo de trabajo de desarrollo mediante mejores prácticas de recopilación de requisitos y documentación",
+          "8": "Stack Tecnológico: JavaScript, Python, React, Node.js, AWS, Docker, OpenAI API, MongoDB, herramientas de CI/CD"
+        }
+      },
       "ey": {
         "title": "Analista de Negocios - Product Owner",
         "company": "Ernst & Young - en representación de Hexaware Technologies",
-        "period": "Diciembre 2021 - Presente",
+        "period": "Diciembre 2021 - Enero 2025",
         "description": {
           "1": "Recopilación de requisitos de producto y gestión de refinamiento de backlog en Azure DevOps",
           "2": "Lideré ceremonias Scrum-ban, planificación de releases y coordinación de equipos multifuncionales",

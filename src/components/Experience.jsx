@@ -3,6 +3,21 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const getExperienceData = (t) => [
   {
+    title: t('experience.roles.tech_consultant.title'),
+    company: t('experience.roles.tech_consultant.company'),
+    period: t('experience.roles.tech_consultant.period'),
+    description: [
+      t('experience.roles.tech_consultant.description.1'),
+      t('experience.roles.tech_consultant.description.2'),
+      t('experience.roles.tech_consultant.description.3'),
+      t('experience.roles.tech_consultant.description.4'),
+      t('experience.roles.tech_consultant.description.5'),
+      t('experience.roles.tech_consultant.description.6'),
+      t('experience.roles.tech_consultant.description.7'),
+      t('experience.roles.tech_consultant.description.8'),
+    ],
+  },
+  {
     title: t('experience.roles.ey.title'),
     company: t('experience.roles.ey.company'),
     period: t('experience.roles.ey.period'),
