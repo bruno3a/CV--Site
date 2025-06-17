@@ -340,8 +340,9 @@
       "timezone": "GMT-3 (Hora Argentina)"
     },
     "actions": {
-      "telegram": "Haz clic para contactarme",
+      "telegram": "Habla con mi asistente de IA!",
       "whatsapp": "Haz clic para contactarme",
+      "telegramTooltip": "Habla con mi asistente con IA!",
       "email": "Haz clic para contactarme"
     }
   }

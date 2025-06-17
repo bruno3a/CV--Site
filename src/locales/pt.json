@@ -321,6 +321,7 @@
     "actions": {
       "telegram": "Clique para me contatar",
       "whatsapp": "Clique para me contatar",
+      "telegramTooltip": "Converse com meu assistente de IA!",
       "email": "Clique para me contatar"
     }
   },

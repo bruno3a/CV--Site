@@ -55,8 +55,8 @@ const Contact = () => {
     {
       icon: <FaTelegram className="text-2xl" />,
       title: 'Telegram',
-      value: btoa('@bruno_9000'),
-      link: btoa('https://t.me/bruno_9000'),
+      value: btoa('@Neurasur_bot'),
+      link: btoa('https://t.me/Neurasur_bot?text=Hola%21%20Tengo%20una%20propuesta%20laboral%20para%20ofrecerte%2C%20est%C3%A1s%20interesado%3F'),
       type: 'url',
       actionText: t('contact.actions.telegram')
     },

@@ -293,8 +293,9 @@
       "timezone": "GMT-3 (Argentina Time)"
     },
     "actions": {
-      "telegram": "Click to contact me",
+      "telegram": "Contact my AI Assistant!",
       "whatsapp": "Click to contact me",
+      "telegramTooltip": "Talk to my AI Assistant!",
       "email": "Click to contact me"
     }
   },
