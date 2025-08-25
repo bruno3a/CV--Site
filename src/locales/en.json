@@ -103,6 +103,7 @@
   "projects": {
     "title": "Projects",
     "view_more": "View More",
+    "view_demo": "View Demo",
     "items": {
       "ai_chatbot": {
         "title": "AI Assisted Chatbot (RAG)",
@@ -130,9 +131,9 @@
         "tags": ["React", "Tailwind CSS", "Frontend", "UI/UX", "Personal Branding"]
       },
       "ecommerce": {
-        "title": "eCommerce Integration Platform",
-        "description": "Currently working on an e-Commerce site project integrated with Mercado Libre billing system, focused on automated customer and purchase order management",
-        "tags": ["eCommerce", "API Integration", "Marketplace", "In Progress", "System Design"]
+        "title": "Industrial Safety Products Distribution Platform",
+        "description": "Complete e-Commerce platform for industrial safety equipment distribution, featuring automated inventory management, real-time stock tracking, and integrated billing system for safety products, PPE, and industrial supplies",
+        "tags": ["Industrial Safety", "PPE Distribution", "Inventory Management", "B2B eCommerce", "Safety Equipment"]
       }
     }
   },

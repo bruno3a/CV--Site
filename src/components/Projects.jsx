@@ -41,7 +41,9 @@ const Projects = () => {
       title: t('projects.items.ecommerce.title'),
       description: t('projects.items.ecommerce.description'),
       image: `${process.env.PUBLIC_URL}/projects/ecommerce-integration.jpg`,
-      tags: ["eCommerce", "API Integration", "Marketplace", "In Progress", "System Design"],
+      tags: t('projects.items.ecommerce.tags', { returnObjects: true }),
+      link: "https://crwork.nextba.com/",
+      linkText: t('projects.view_demo')
     },
   ];
 
@@ -63,17 +65,36 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="card group relative overflow-hidden"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              className="card group cursor-pointer"
+              whileHover={{ y: -5 }}
             >
-              {/* Imagen del proyecto - Ajustada para móvil */}
-              <div className="aspect-video overflow-hidden rounded-lg mb-4 h-[150px] md:h-auto">
+              {/* Imagen con botón flotante */}
+              <div className="relative mb-4 overflow-hidden rounded-lg">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
+                
+                {/* Botón flotante sobre la imagen */}
+                {project.link && (
+                  <div className="absolute bottom-3 left-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 backdrop-blur-sm shadow-lg hover:shadow-xl border border-primary/20 hover:border-primary/40 group/btn"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <span className="relative z-10">{project.linkText}</span>
+                      <svg className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      {/* Efecto de brillo */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-out rounded-lg"></div>
+                    </a>
+                  </div>
+                )}
               </div>
 
               {/* Contenido */}
@@ -81,8 +102,8 @@ const Projects = () => {
                 <h3 className="text-lg md:text-xl font-bold text-primary">{project.title}</h3>
                 <p className="text-sm md:text-base text-gray-400">{project.description}</p>
                 
-                {/* Tags - Ocultos en móvil */}
-                <div className="hidden md:flex flex-wrap gap-2">
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
@@ -93,13 +114,6 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Hover effect */}
-              <div
-                className={`absolute inset-0 border-2 border-primary/0 rounded-lg transition-all duration-300 ${
-                  hoveredIndex === index ? 'border-primary/50' : ''
-                }`}
-              />
             </motion.div>
           ))}
         </div>

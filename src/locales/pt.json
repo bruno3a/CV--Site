@@ -103,6 +103,7 @@
   "projects": {
     "title": "Projetos",
     "view_more": "Ver Mais",
+    "view_demo": "Ver Demo",
     "items": {
       "ai_chatbot": {
         "title": "Chatbot Assistido por IA (RAG)",
@@ -130,9 +131,9 @@
         "tags": ["React", "Tailwind CSS", "Frontend", "UI/UX", "Marca Pessoal"]
       },
       "ecommerce": {
-        "title": "Plataforma de Integração eCommerce",
-        "description": "Atualmente estou trabalhando em um projeto de site e-Commerce integrado com sistema de faturamento Mercado Livre, focado na gestão automatizada de clientes e pedidos de compra",
-        "tags": ["eCommerce", "Integração API", "Marketplace", "Em Andamento", "Design de Sistemas"]
+        "title": "Plataforma de Distribuição de Produtos de Segurança Industrial",
+        "description": "Plataforma e-Commerce completa para distribuição de equipamentos de segurança industrial, com gestão automatizada de estoque, rastreamento em tempo real e sistema de faturamento integrado para produtos de segurança, EPI e suprimentos industriais",
+        "tags": ["Segurança Industrial", "Distribuição EPI", "Gestão de Estoque", "eCommerce B2B", "Equipamentos de Segurança"]
       }
     }
   },
@@ -347,6 +348,8 @@
     }
   }
 }
+
+
 
 
 
