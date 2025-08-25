@@ -1,6 +1,15 @@
 User-agent: *
 Allow: /
 
+# Optimización para crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
 # Protect against email harvesting
 Disallow: /*@*
 Disallow: /mailto:*
@@ -10,5 +19,10 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
 Disallow: /files/
+Disallow: /*.json$
+
+# Allow important files
+Allow: /manifest.json
+Allow: /sitemap.xml
 
 Sitemap: https://nextba.com/sitemap.xml
