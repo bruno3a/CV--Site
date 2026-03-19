@@ -42,7 +42,7 @@ const Projects = () => {
       description: t('projects.items.ecommerce.description'),
       image: `${process.env.PUBLIC_URL}/projects/ecommerce-integration.jpg`,
       tags: t('projects.items.ecommerce.tags', { returnObjects: true }),
-      link: "https://crwork.nextba.com/",
+      link: "https://crwork.neurasur.com/",
       linkText: t('projects.view_demo')
     },
   ];

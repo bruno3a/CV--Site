@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nextba.com/</loc>
+    <loc>https://bruno.neurasur.com/</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextba.com/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://nextba.com/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://nextba.com/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://nextba.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bruno.neurasur.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bruno.neurasur.com/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://bruno.neurasur.com/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bruno.neurasur.com/" />
   </url>
   <url>
-    <loc>https://crwork.nextba.com/</loc>
+    <loc>https://crwork.neurasur.com/</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
