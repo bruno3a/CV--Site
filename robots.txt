@@ -25,4 +25,4 @@ Disallow: /*.json$
 Allow: /manifest.json
 Allow: /sitemap.xml
 
-Sitemap: https://nextba.com/sitemap.xml
+Sitemap: https://bruno.neurasur.com/sitemap.xml
