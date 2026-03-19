@@ -30,12 +30,11 @@ jobs:
           REACT_APP_BOTPRESS_MESSAGING_URL: ${{ secrets.REACT_APP_BOTPRESS_MESSAGING_URL }}
           REACT_APP_BOTPRESS_BOT_ID: ${{ secrets.REACT_APP_BOTPRESS_BOT_ID }}
           CI: false
-          # Eliminar o actualizar PUBLIC_URL para usar el dominio personalizado
-          PUBLIC_URL: https://nextba.com
+          PUBLIC_URL: https://bruno.neurasur.com
         run: npm run build
 
       - name: Create CNAME
-        run: echo "nextba.com" > build/CNAME
+        run: echo "bruno.neurasur.com" > build/CNAME
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
