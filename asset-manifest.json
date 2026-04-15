@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "https://bruno.neurasur.com/static/css/main.75fa697e.css",
-    "main.js": "https://bruno.neurasur.com/static/js/main.7742de90.js",
+    "main.css": "https://bruno.neurasur.com/static/css/main.22a91060.css",
+    "main.js": "https://bruno.neurasur.com/static/js/main.1be825bb.js",
     "index.html": "https://bruno.neurasur.com/index.html",
-    "main.75fa697e.css.map": "https://bruno.neurasur.com/static/css/main.75fa697e.css.map",
-    "main.7742de90.js.map": "https://bruno.neurasur.com/static/js/main.7742de90.js.map"
+    "main.22a91060.css.map": "https://bruno.neurasur.com/static/css/main.22a91060.css.map",
+    "main.1be825bb.js.map": "https://bruno.neurasur.com/static/js/main.1be825bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.75fa697e.css",
-    "static/js/main.7742de90.js"
+    "static/css/main.22a91060.css",
+    "static/js/main.1be825bb.js"
   ]
 }
