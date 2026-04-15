@@ -42,6 +42,19 @@
   "experience": {
     "title": "Experience",
     "roles": {
+      "farmers": {
+        "title": "Business Analyst - Product Owner",
+        "company": "Farmers Insurance - via Capgemini Argentina",
+        "period": "July 2025 - Present",
+        "description": {
+          "1": "Led end-to-end requirements elicitation with executive, commercial, and operational stakeholders to define business-critical KPIs",
+          "2": "Translated business objectives into reporting requirements, coordinating with data and technical teams to integrate multiple data sources",
+          "3": "Designed, maintained, and enhanced Power BI dashboards for Sales and Executive Management",
+          "4": "Actively supported data validation, UAT cycles, stakeholder demos, and feedback-driven refinements to ensure trust and adoption of insights",
+          "5": "Delivered executive and managerial dashboards that improved visibility into commercial performance and portfolio evolution",
+          "6": "Strengthened expertise in insurance analytics, stakeholder management, KPI definition, and business-oriented BI solutions"
+        }
+      },
       "tech_consultant": {
         "title": "Technology & AI Consultant | Software & Web Solutions",
         "company": "Self Employed",

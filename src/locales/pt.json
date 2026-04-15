@@ -42,6 +42,19 @@
   "experience": {
     "title": "Experiência",
     "roles": {
+      "farmers": {
+        "title": "Analista de Negócios - Product Owner",
+        "company": "Farmers Insurance - via Capgemini Argentina",
+        "period": "Julho 2025 - Presente",
+        "description": {
+          "1": "Liderei a elicitação de requisitos de ponta a ponta com stakeholders executivos, comerciais e operacionais para definir KPIs críticos do negócio",
+          "2": "Traduzi objetivos de negócio em requisitos de relatórios, coordenando com equipes de dados e técnicas para integrar múltiplas fontes de dados",
+          "3": "Projetei, mantive e aprimorei dashboards do Power BI para Vendas e Gestão Executiva",
+          "4": "Apoiei ativamente a validação de dados, ciclos de UAT, demos com stakeholders e refinamentos baseados em feedback para garantir confiança e adoção de insights",
+          "5": "Entreguei dashboards executivos e gerenciais que melhoraram a visibilidade do desempenho comercial e a evolução do portfólio",
+          "6": "Fortaleci a experiência em análise de seguros, gestão de stakeholders, definição de KPIs e soluções de BI orientadas ao negócio"
+        }
+      },
       "tech_consultant": {
         "title": "Consultor de Tecnologia e IA | Soluções de Software e Web",
         "company": "Autônomo",
@@ -348,6 +361,7 @@
     }
   }
 }
+
 
 
 
