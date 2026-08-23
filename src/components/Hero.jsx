@@ -86,6 +86,7 @@ const Hero = () => {
       if (window.botpressWebChat) {
         window.botpressWebChat.sendEvent({ type: 'show' });
       }
+      window.dispatchEvent(new CustomEvent('open-portfolio-chat'));
     }, 1000);
   };
 
