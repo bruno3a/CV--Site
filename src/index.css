@@ -124,11 +124,34 @@
 }
 
 /* Botpress Web Chat customization */
-#bp-web-widget-container {
+body.provider-botpress #bp-web-widget-container {
   z-index: 9999 !important;
   position: fixed !important;
   bottom: 24px !important;
   right: 24px !important;
+}
+
+/* Ocultar completamente elementos de Botpress cuando el proveedor es n8n */
+body:not(.provider-botpress) #bp-web-widget-container,
+body:not(.provider-botpress) .bpw-widget-btn,
+body:not(.provider-botpress) .bpw-layout,
+body:not(.provider-botpress) iframe[src*="botpress"],
+body:not(.provider-botpress) iframe[id*="bp-"],
+body:not(.provider-botpress) [class*="bpw-"],
+body:not(.provider-botpress) [id*="bp-web-widget"],
+body.provider-n8n #bp-web-widget-container,
+body.provider-n8n .bpw-widget-btn,
+body.provider-n8n .bpw-layout,
+body.provider-n8n iframe[src*="botpress"],
+body.provider-n8n iframe[id*="bp-"],
+body.provider-n8n [class*="bpw-"],
+body.provider-n8n [id*="bp-web-widget"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /* Chat pointer animation */

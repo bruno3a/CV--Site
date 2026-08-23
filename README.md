@@ -36,20 +36,21 @@ This project demonstrates my ability to manage and deliver a modern web product 
 
 ## 🤖 Chatbot Architecture & Feature Flag
 
-The portfolio includes a flexible chatbot architecture controlled by a **Feature Flag** in the environment variables. This allows seamless switching between a custom **n8n AI Workflow / Webhook** and **Botpress Cloud**, preserving both codebases without coupling.
+The portfolio includes a flexible chatbot architecture controlled by environment and a **Development Feature Flag**:
 
-### Feature Flag Configuration
+- **🚀 Production Policy:** Whenever the project is deployed to production (`NODE_ENV === 'production'`), **Botpress is strictly disabled** and the **n8n Webhook Chatbot** is enforced automatically.
+- **🛠️ Development Environment:** In local development (`npm start`), developers can easily toggle between **n8n** and **Botpress** using `REACT_APP_CHAT_PROVIDER` in `.env.development`.
 
-Configure your `.env` or `.env.development` file:
+### Feature Flag Configuration (`.env.development`)
 
 ```bash
-# Chat Provider Feature Flag: 'n8n' (default) or 'botpress'
+# Chat Provider (Development only): 'n8n' (default) or 'botpress'
 REACT_APP_CHAT_PROVIDER=n8n
 
 # n8n Webhook URL
 REACT_APP_N8N_WEBHOOK_URL=https://n8n.neurasur.com/webhook-test/CV
 
-# Botpress Configuration (active when REACT_APP_CHAT_PROVIDER=botpress)
+# Botpress Configuration (used only when REACT_APP_CHAT_PROVIDER=botpress in development)
 REACT_APP_BOTPRESS_HOST_URL=https://cdn.botpress.cloud/webchat/v2
 REACT_APP_BOTPRESS_MESSAGING_URL=https://messaging.botpress.cloud
 REACT_APP_BOTPRESS_SCRIPTS_URL=https://cdn.botpress.cloud/webchat/v2.2/inject.js
@@ -59,7 +60,7 @@ REACT_APP_BOTPRESS_BOT_ID=804de353-fbec-41d6-9009-9ac3316f94f7
 
 ### 1. n8n Webhook Integration (`REACT_APP_CHAT_PROVIDER=n8n`)
 
-When `REACT_APP_CHAT_PROVIDER=n8n` is set (or omitted), the application mounts the custom `N8NChat` component.
+When active (default & all production builds), the application mounts the custom `N8NChat` component.
 
 - **Request Format (POST):**
   ```json
@@ -84,12 +85,13 @@ When `REACT_APP_CHAT_PROVIDER=n8n` is set (or omitted), the application mounts t
   - Basic Markdown rendering (links, bold text, line breaks).
   - Session persistence and message history in `sessionStorage`.
   - Seamless integration with the Hero section "Get instant help" button.
+  - Fully responsive and touch-optimized for mobile devices.
 
-### 2. Botpress Integration (`REACT_APP_CHAT_PROVIDER=botpress`)
+### 2. Botpress Integration (`REACT_APP_CHAT_PROVIDER=botpress` - Development only)
 
-To switch back to the Botpress Webchat widget:
-1. Set `REACT_APP_CHAT_PROVIDER=botpress` in `.env`.
-2. Restart the React development server (`npm start`) or rebuild (`npm run build`).
+To test the legacy Botpress Webchat widget during development:
+1. Set `REACT_APP_CHAT_PROVIDER=botpress` in `.env.development`.
+2. Restart the React development server (`npm start`).
 3. The application will load the original `BotpressChat` component with all original scripts and CSS customizations.
 
 ---
