@@ -25,6 +25,8 @@ jobs:
 
       - name: Build
         env:
+          REACT_APP_CHAT_PROVIDER: ${{ secrets.REACT_APP_CHAT_PROVIDER || 'n8n' }}
+          REACT_APP_N8N_WEBHOOK_URL: ${{ secrets.REACT_APP_N8N_WEBHOOK_URL || 'https://n8n.neurasur.com/webhook/CV' }}
           REACT_APP_BOTPRESS_SCRIPTS_URL: ${{ secrets.REACT_APP_BOTPRESS_SCRIPTS_URL }}
           REACT_APP_BOTPRESS_HOST_URL: ${{ secrets.REACT_APP_BOTPRESS_HOST_URL }}
           REACT_APP_BOTPRESS_MESSAGING_URL: ${{ secrets.REACT_APP_BOTPRESS_MESSAGING_URL }}

@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fa';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const N8N_WEBHOOK_URL = process.env.REACT_APP_N8N_WEBHOOK_URL || 'https://n8n.neurasur.com/webhook-test/CV';
+const N8N_WEBHOOK_URL = (process.env.REACT_APP_N8N_WEBHOOK_URL || 'https://n8n.neurasur.com/webhook/CV').trim().split(' ')[0];
 
 // Generar sessionId único para tracking de conversación en n8n
 const getOrCreateSessionId = () => {
